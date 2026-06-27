@@ -5,13 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { headerNavItems } from "@/data/navigation";
-
-const productDropdownItems = [
-  { name: "Amino Acids and Derivatives", href: "/product-category/amino-acids-derivatives" },
-  { name: "Chelated Minerals", href: "/product-category/minerals" },
-  { name: "Vitamins & derivatives", href: "/product-category/vitamins-derivatives" },
-  { name: "Excipients", href: "/product-category/excipients" },
-];
+import { productCategories, products } from "@/data/products";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,17 +47,85 @@ export default function Header() {
                   </span>
                 </Link>
                 {/* Hover Dropdown Menu */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 ease-out z-50">
-                  <div className="bg-white border border-surface-container-highest shadow-2xl rounded-2xl p-6 w-72 flex flex-col gap-4 text-left">
-                    {productDropdownItems.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="font-button text-xs tracking-wider text-deep-navy font-extrabold hover:text-primary transition-all hover:translate-x-1 uppercase block"
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
+                <div className="absolute top-full left-0 pt-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 ease-out z-50">
+                  <div className="bg-white border border-surface-container-highest shadow-2xl rounded-2xl p-3 w-80 flex flex-col gap-1 text-left">
+                    {productCategories.filter(c => !c.parentCategorySlug).map((pcat) => {
+                      const subcats = productCategories.filter(c => c.parentCategorySlug === pcat.slug);
+                      const directProds = subcats.length === 0 ? products.filter(p => p.parentCategorySlug === pcat.slug) : [];
+
+                      return (
+                        <div key={pcat.slug} className="group/level2 relative py-2 px-3 rounded-xl hover:bg-surface-container-low transition-colors">
+                          <Link
+                            href={`/product-category/${pcat.slug}`}
+                            className="flex items-center justify-between font-button text-xs tracking-wider text-deep-navy font-extrabold hover:text-primary transition-colors uppercase w-full"
+                          >
+                            <span>{pcat.name}</span>
+                            {(subcats.length > 0 || directProds.length > 0) && (
+                              <span className="material-symbols-outlined text-sm select-none ml-2 text-on-surface-variant/70">
+                                chevron_right
+                              </span>
+                            )}
+                          </Link>
+
+                          {/* Level 2 Flyout (Subcategories or Products) */}
+                          {(subcats.length > 0 || directProds.length > 0) && (
+                            <div className="absolute left-full top-0 pl-2 opacity-0 pointer-events-none group-hover/level2:opacity-100 group-hover/level2:pointer-events-auto transition-all duration-200 z-50">
+                              <div className="bg-white border border-surface-container-highest shadow-2xl rounded-2xl p-3 w-64 flex flex-col gap-1 text-left">
+                                {subcats.length > 0 ? (
+                                  // Render Subcategories
+                                  subcats.map((subcat) => {
+                                    const subcatProds = products.filter(p => p.subCategorySlug === subcat.slug);
+                                    return (
+                                      <div key={subcat.slug} className="group/level3 relative py-2 px-3 rounded-xl hover:bg-surface-container-low transition-colors">
+                                        <Link
+                                          href={`/product-category/${subcat.slug}`}
+                                          className="flex items-center justify-between font-button text-[11px] tracking-wider text-deep-navy font-bold hover:text-primary transition-colors uppercase w-full"
+                                        >
+                                          <span>{subcat.name}</span>
+                                          {subcatProds.length > 0 && (
+                                            <span className="material-symbols-outlined text-[12px] select-none ml-2 text-on-surface-variant/60">
+                                              chevron_right
+                                            </span>
+                                          )}
+                                        </Link>
+
+                                        {/* Level 3 Flyout (Products under Subcategory) */}
+                                        {subcatProds.length > 0 && (
+                                          <div className="absolute left-full top-0 pl-2 opacity-0 pointer-events-none group-hover/level3:opacity-100 group-hover/level3:pointer-events-auto transition-all duration-200 z-50">
+                                            <div className="bg-white border border-surface-container-highest shadow-2xl rounded-2xl p-3 w-72 max-h-[320px] overflow-y-auto flex flex-col gap-1 text-left scrollbar-thin">
+                                              {subcatProds.map((prod) => (
+                                                <Link
+                                                  key={prod.slug}
+                                                  href={`/products/${prod.slug}`}
+                                                  className="font-button text-[10px] tracking-wider text-on-surface-variant hover:text-primary transition-colors uppercase block py-2 px-3 rounded-lg hover:bg-surface-container-low"
+                                                >
+                                                  {prod.name}
+                                                </Link>
+                                              ))}
+                                            </div>
+                                          </div>
+                                        )}
+                                      </div>
+                                    );
+                                  })
+                                ) : (
+                                  // Render Direct Products
+                                  directProds.map((prod) => (
+                                    <Link
+                                      key={prod.slug}
+                                      href={`/products/${prod.slug}`}
+                                      className="font-button text-[10px] tracking-wider text-on-surface-variant hover:text-primary transition-colors uppercase block py-2 px-3 rounded-lg hover:bg-surface-container-low"
+                                    >
+                                      {prod.name}
+                                    </Link>
+                                  ))
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -122,10 +184,10 @@ export default function Header() {
                   </Link>
                   {/* Nested Sub-links on mobile */}
                   <div className="pl-4 flex flex-col gap-3 pb-2 pt-1">
-                    {productDropdownItems.map((subItem) => (
+                    {productCategories.filter(c => !c.parentCategorySlug).map((subItem) => (
                       <Link
                         key={subItem.name}
-                        href={subItem.href}
+                        href={`/product-category/${subItem.slug}`}
                         onClick={() => setIsOpen(false)}
                         className="font-button text-xs tracking-wider text-deep-navy font-extrabold hover:text-primary uppercase block"
                       >
