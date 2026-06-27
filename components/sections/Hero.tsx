@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative px-margin-mobile md:px-margin-desktop py-8 md:py-24 overflow-hidden">
-      <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
-        <div className="relative z-10 space-y-5 md:space-y-8">
+    <section className="relative px-margin-mobile md:px-margin-desktop py-6 md:py-12 lg:py-16 overflow-hidden">
+      <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="relative z-10 space-y-4 md:space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-container/10 text-primary rounded-full font-label-caps uppercase text-[10px] md:text-xs">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
             Powering Purity for Over 30 Years
@@ -34,8 +34,8 @@ export default function Hero() {
         </div>
 
         <div className="relative mt-8 lg:mt-0">
-          {/* Lab image with curved mask */}
-          <div className="relative z-0 rounded-[4rem] overflow-hidden shadow-2xl aspect-[4/5] w-full max-w-[500px] mx-auto lg:max-w-none">
+          {/* Lab image with curved mask - aspect changed to [4/3] to reduce height and fit viewport */}
+          <div className="relative z-0 rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/3] w-full max-w-[480px] mx-auto lg:ml-auto">
             <Image
               alt="Hyper-realistic lab environment"
               src="/aditya chemicals images/home page/home page images/magnific_massive-pharmaceutical-ma_mCc5jr4hJQ.png"
@@ -48,24 +48,24 @@ export default function Hero() {
           </div>
 
           {/* Floating Data Badges */}
-          <div className="absolute -left-4 md:-left-12 top-1/4 animate-float z-20">
-            <div className="bg-white/90 backdrop-blur shadow-xl p-4 md:p-6 rounded-xl border border-surface-container-highest">
-              <p className="text-primary font-bold text-headline-md leading-none">41+</p>
-              <p className="text-on-surface-variant font-label-caps uppercase text-[10px] mt-1">Products</p>
+          <div className="absolute -left-4 md:-left-8 top-[10%] animate-float z-20">
+            <div className="bg-white/90 backdrop-blur shadow-xl p-3 md:p-4 rounded-xl border border-surface-container-highest">
+              <p className="text-primary font-bold text-2xl md:text-3xl leading-none">41+</p>
+              <p className="text-on-surface-variant font-label-caps uppercase text-[9px] md:text-[10px] mt-1">Products</p>
             </div>
           </div>
 
-          <div className="absolute -right-4 bottom-1/3 animate-float z-20" style={{ animationDelay: "-2s" }}>
-            <div className="bg-white/90 backdrop-blur shadow-xl p-4 md:p-6 rounded-xl border border-surface-container-highest">
-              <p className="text-primary font-bold text-headline-md leading-none">10+</p>
-              <p className="text-on-surface-variant font-label-caps uppercase text-[10px] mt-1">Countries</p>
+          <div className="absolute -right-4 bottom-[20%] animate-float z-20" style={{ animationDelay: "-2s" }}>
+            <div className="bg-white/90 backdrop-blur shadow-xl p-3 md:p-4 rounded-xl border border-surface-container-highest">
+              <p className="text-primary font-bold text-2xl md:text-3xl leading-none">10+</p>
+              <p className="text-on-surface-variant font-label-caps uppercase text-[9px] md:text-[10px] mt-1">Countries</p>
             </div>
           </div>
 
-          <div className="absolute left-1/4 -bottom-4 md:-bottom-8 animate-float z-20" style={{ animationDelay: "-4s" }}>
-            <div className="bg-white/90 backdrop-blur shadow-xl p-4 md:p-6 rounded-xl border border-surface-container-highest">
-              <p className="text-primary font-bold text-headline-md leading-none">30+</p>
-              <p className="text-on-surface-variant font-label-caps uppercase text-[10px] mt-1">Years Experience</p>
+          <div className="absolute left-1/4 -bottom-4 animate-float z-20" style={{ animationDelay: "-4s" }}>
+            <div className="bg-white/90 backdrop-blur shadow-xl p-3 md:p-4 rounded-xl border border-surface-container-highest">
+              <p className="text-primary font-bold text-2xl md:text-3xl leading-none">30+</p>
+              <p className="text-on-surface-variant font-label-caps uppercase text-[9px] md:text-[10px] mt-1">Years Experience</p>
             </div>
           </div>
         </div>

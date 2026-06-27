@@ -18,7 +18,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 flex justify-between items-center px-gutter py-4 bg-white/70 backdrop-blur-xl border border-glass-stroke rounded-full mt-6 mx-auto w-[90%] max-w-container-max shadow-sm transition-all duration-300 ease-in-out">
+    <header className="sticky top-0 z-50 flex justify-between items-center px-gutter py-4 bg-white/70 backdrop-blur-xl border border-glass-stroke rounded-full mt-3 md:mt-4 mx-auto w-[90%] max-w-container-max shadow-sm transition-all duration-300 ease-in-out">
       {/* Brand Logo */}
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center gap-3">
