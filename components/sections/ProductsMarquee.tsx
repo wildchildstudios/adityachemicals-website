@@ -44,7 +44,7 @@ export default function ProductsMarquee() {
                 <Link
                   key={product.slug}
                   href={`/products/${product.slug}`}
-                  className="relative w-64 h-96 flex-shrink-0 rounded-[2rem] overflow-hidden shadow-md group hover:scale-[1.05] transition-all duration-300 cursor-pointer block"
+                  className="relative w-80 h-96 flex-shrink-0 rounded-[2rem] overflow-hidden shadow-md group hover:scale-[1.05] transition-all duration-300 cursor-pointer block"
                 >
                   {/* Full-bleed background image */}
                   <Image
@@ -52,7 +52,7 @@ export default function ProductsMarquee() {
                     alt={product.name}
                     fill
                     className="object-cover"
-                    sizes="256px"
+                    sizes="320px"
                   />
                   {/* Dark gradient overlay for readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 opacity-90 group-hover:opacity-95" />
@@ -80,7 +80,7 @@ export default function ProductsMarquee() {
                 <Link
                   key={`dup-${product.slug}`}
                   href={`/products/${product.slug}`}
-                  className="relative w-64 h-96 flex-shrink-0 rounded-[2rem] overflow-hidden shadow-md group hover:scale-[1.05] transition-all duration-300 cursor-pointer block"
+                  className="relative w-80 h-96 flex-shrink-0 rounded-[2rem] overflow-hidden shadow-md group hover:scale-[1.05] transition-all duration-300 cursor-pointer block"
                 >
                   {/* Full-bleed background image */}
                   <Image
@@ -88,7 +88,7 @@ export default function ProductsMarquee() {
                     alt={product.name}
                     fill
                     className="object-cover"
-                    sizes="256px"
+                    sizes="320px"
                   />
                   {/* Dark gradient overlay for readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 opacity-90 group-hover:opacity-95" />

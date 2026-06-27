@@ -41,7 +41,7 @@ export default function Hero() {
               src="/aditya chemicals images/home page/home page images/magnific_massive-pharmaceutical-ma_mCc5jr4hJQ.png"
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw" 
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/40 to-transparent"></div>
