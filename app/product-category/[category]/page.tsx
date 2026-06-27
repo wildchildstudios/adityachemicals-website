@@ -61,24 +61,24 @@ export default async function CategoryPage({ params }: PageProps) {
         </nav>
 
         {/* Hero Banner Header */}
-        <div className="relative w-full h-[280px] md:h-[360px] rounded-[2.5rem] overflow-hidden shadow-xl border border-glass-stroke bg-deep-navy">
+        <div className="relative w-full h-auto min-h-[200px] md:h-[360px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl border border-glass-stroke bg-deep-navy flex flex-col justify-end">
           <Image
             src={category.bannerPath}
             alt={`${category.name} Banner`}
             fill
-            className="object-cover opacity-60"
+            className="hidden md:block object-cover opacity-60"
             sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-deep-navy/20 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 p-8 md:p-12 space-y-3 z-10 max-w-3xl">
-            <span className="px-3 py-1 bg-white/20 backdrop-blur text-white rounded-full text-xs font-semibold select-none uppercase tracking-wider">
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-deep-navy/20 to-transparent"></div>
+          <div className="relative md:absolute bottom-0 left-0 p-6 md:p-12 space-y-3 z-10 max-w-3xl">
+            <span className="px-3 py-1 bg-white/20 backdrop-blur text-white rounded-full text-xs font-semibold select-none uppercase tracking-wider w-fit block">
               {category.parentCategorySlug ? "Chelated Minerals Sub-Category" : "Product Category"}
             </span>
-            <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight font-headline-md">
+            <h1 className="text-2xl md:text-5xl font-bold text-white tracking-tight leading-tight font-headline-md">
               {category.name}
             </h1>
-            <p className="text-white/80 font-body-md text-sm md:text-base leading-relaxed">
+            <p className="text-white/80 font-body-md text-xs md:text-base leading-relaxed">
               {category.description}
             </p>
           </div>
@@ -144,7 +144,7 @@ export default async function CategoryPage({ params }: PageProps) {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
                       />
                     </div>
-                    
+
                     <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
                       <div>
                         <h3 className="text-base font-bold text-deep-navy leading-snug font-headline-md">{product.name}</h3>
