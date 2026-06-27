@@ -86,11 +86,11 @@ export default function Header() {
 
       {/* Desktop Brochure CTA Button */}
       <div className="hidden xl:flex items-center gap-4">
-        <Link href="/contact?request=brochure">
+        <a href="/IFT_Brochure.pdf" download="IFT_Brochure.pdf" target="_blank">
           <button className="font-button text-button uppercase px-8 py-3 bg-primary text-white rounded-full hover:scale-[0.98] transition-all duration-200 shadow-md cursor-pointer tracking-wider font-bold">
             Brochure
           </button>
-        </Link>
+        </a>
       </div>
 
       {/* Mobile Hamburger button */}
@@ -150,11 +150,11 @@ export default function Header() {
               </Link>
             );
           })}
-          <Link href="/contact?request=brochure" onClick={() => setIsOpen(false)} className="w-full mt-2">
+          <a href="/IFT_Brochure.pdf" download="IFT_Brochure.pdf" target="_blank" onClick={() => setIsOpen(false)} className="w-full mt-2 block">
             <button className="w-full font-button text-button uppercase px-8 py-4 bg-primary text-white rounded-full shadow-md cursor-pointer text-center tracking-wider font-bold">
               Brochure
             </button>
-          </Link>
+          </a>
         </div>
       )}
     </header>

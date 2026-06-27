@@ -131,11 +131,11 @@ export default function AboutPage() {
                   Contact Us
                 </button>
               </Link>
-              <Link href="/contact?request=brochure">
+              <a href="/IFT_Brochure.pdf" download="IFT_Brochure.pdf" target="_blank">
                 <button className="px-6 py-3 md:px-8 md:py-4 border border-white/20 text-white rounded-full font-button text-button uppercase hover:bg-white/5 transition-all cursor-pointer">
-                  Request Brochure
+                  Download Brochure
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
