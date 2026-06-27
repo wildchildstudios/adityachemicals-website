@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aditya Chemicals | Precision Chemistry, High-Performance Global Impact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#faf8ff",
+                    "surface-container-low": "#f2f3ff",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#001551",
+                    "surface-container-highest": "#dae2fd",
+                    "surface-tint": "#004dea",
+                    "glass-stroke": "rgba(255, 255, 255, 0.2)",
+                    "on-tertiary-fixed-variant": "#384953",
+                    "on-surface": "#131b2e",
+                    "inverse-surface": "#283044",
+                    "surface": "#faf8ff",
+                    "inverse-on-surface": "#eef0ff",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e2e7ff",
+                    "tertiary": "#41525c",
+                    "on-secondary-fixed": "#0d1c32",
+                    "on-tertiary-container": "#d8eaf6",
+                    "tertiary-container": "#596a74",
+                    "surface-bright": "#faf8ff",
+                    "surface-dim": "#d2d9f4",
+                    "on-background": "#131b2e",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "outline-variant": "#c3c5d9",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#434656",
+                    "inverse-primary": "#b6c4ff",
+                    "surface-container": "#eaedff",
+                    "primary-fixed": "#dce1ff",
+                    "outline": "#737688",
+                    "secondary-fixed": "#d6e3ff",
+                    "primary-container": "#0055ff",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "on-tertiary-fixed": "#0c1e26",
+                    "secondary": "#515f78",
+                    "secondary-container": "#d2e0fe",
+                    "surface-variant": "#dae2fd",
+                    "deep-navy": "#0A192F",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#d3e5f1",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "vibrant-azure": "#0055FF",
+                    "primary": "#0041c8",
+                    "on-secondary-container": "#55637d",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "sky-tint": "#F0F9FF",
+                    "tertiary-fixed-dim": "#b7c9d5",
+                    "on-primary-fixed-variant": "#0039b3",
+                    "on-primary-container": "#e3e6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "24px",
+                    "section-padding": "120px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "bento-gap": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Manrope"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "button": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "600"}],
+                    "button": ["15px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .bento-card {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-card:hover {
+            transform: translateY(-8px);
+        }
+        .floating-badge {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .image-mask-curvy {
+            border-radius: 4rem 1rem 4rem 1rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center px-gutter py-4 bg-white/70 dark:bg-deep-navy/70 backdrop-blur-xl border border-glass-stroke rounded-full mt-6 mx-auto w-[90%] max-w-container-max shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-surface-bright">Aditya Chemicals</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-button text-button uppercase text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 transition-all duration-300" href="#">Home</a>
+<a class="font-button text-button uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="#">About Us</a>
+<a class="font-button text-button uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Products</a>
+<a class="font-button text-button uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Certificates</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-button text-button uppercase px-8 py-3 bg-vibrant-azure text-white rounded-full hover:scale-[0.98] transition-transform duration-200 shadow-md">
+                Contact Us
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative px-margin-desktop py-section-padding overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative z-10 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container/10 text-primary rounded-full font-label-caps uppercase">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Powering Purity for Over 30 Years
+                    </div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-deep-navy leading-none">
+                        Precision Chemistry. <br/>
+<span class="text-primary italic">High-Performance</span> <br/>
+                        Global Impact.
+                    </h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                        Recognized among the top API manufacturing companies globally, delivering pharmaceutical and nutrition excellence since 1992. We build the chemistry that performs.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-10 py-5 bg-vibrant-azure text-white rounded-full font-button text-button uppercase shadow-xl hover:scale-95 transition-all">
+                            Let's Connect
+                        </button>
+<button class="px-10 py-5 border-2 border-primary-fixed text-primary rounded-full font-button text-button uppercase hover:bg-primary-fixed/20 transition-all flex items-center gap-2">
+                            Our Products
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative">
+<!-- Hyper-realistic lab imagery with curvy mask -->
+<div class="relative z-0 rounded-[4rem] overflow-hidden shadow-2xl">
+<img alt="Hyper-realistic lab environment" class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLu4J-E1gyLyUPrRako_PEiux6oMsOw_zJY06F34ztB2v2Z66dgHbMb2s8xXqEDASsUuamyf4toKfQsoFna5wBKLaNZueE0xRnrvN5bJ5TKHNBn7eBvfAAI-p9cPXx5t9RnJWkTQZteEVP2a6TuENlCB8-cjkJTSunifYhftQ067zRFHHwoingHbZf5ODhRx_KnqTTzk1qNnSKt1yyE1fqaikl6U-ou1QUXfpT6mw5EBKO4EnHkDQJiS4tv6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/40 to-transparent"></div>
+</div>
+<!-- Floating Data Badges -->
+<div class="absolute -left-12 top-1/4 floating-badge z-20">
+<div class="bg-white/90 backdrop-blur shadow-xl p-6 rounded-xl border border-surface-container-highest">
+<p class="text-primary font-bold text-headline-md leading-none">41+</p>
+<p class="text-on-surface-variant font-label-caps uppercase text-[10px] mt-1">Products</p>
+</div>
+</div>
+<div class="absolute -right-8 bottom-1/3 floating-badge z-20" style="animation-delay: -2s;">
+<div class="bg-white/90 backdrop-blur shadow-xl p-6 rounded-xl border border-surface-container-highest">
+<p class="text-primary font-bold text-headline-md leading-none">10+</p>
+<p class="text-on-surface-variant font-label-caps uppercase text-[10px] mt-1">Countries</p>
+</div>
+</div>
+<div class="absolute left-1/4 -bottom-8 floating-badge z-20" style="animation-delay: -4s;">
+<div class="bg-white/90 backdrop-blur shadow-xl p-6 rounded-xl border border-surface-container-highest">
+<p class="text-primary font-bold text-headline-md leading-none">30+</p>
+<p class="text-on-surface-variant font-label-caps uppercase text-[10px] mt-1">Years Experience</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section: Chemistry that Performs -->
+<section class="px-margin-desktop py-section-padding bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="rounded-[4rem] overflow-hidden shadow-xl aspect-square">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-detail macro shot of chemical crystallization in a pristine laboratory setting. The lighting is cold and professional with soft azure tones, emphasizing scientific precision. Geometric glass apparatus and stainless steel components create a structured, modern atmosphere against a clean, light-mode background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGaqNQJi9tHEoiTfFNku4MQ6vpyA5h-qCFAo40VN30OoTwaKXFD_4K7f9pv0K2UuVrGKs5arU6DwwMR7b-6Ry3yv_UDiPILA-j_sHl5cwzsux574tBq92WIG47h5DTixMhfQzVVib6RJOect7naLH33n2hhvdrVxkD7Be7WmgknhilTA8DAX1HuKELTyvKxu6cQARbTMl5IzBQuGrJHJnMH4sSP6Ourvbi2UbGBkbif5tAnJmF1ThIaNbyidrnoBHbWJIF98ScdaJ3"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary rounded-full -z-10 blur-3xl opacity-20"></div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">
+                        Chemistry that <br/><span class="text-primary italic">Performs.</span>
+</h2>
+<p class="text-body-lg text-on-surface-variant">
+                        Founded in 1992, Aditya Chemicals is a pioneer in India, established to meet the growing demand for value-based solutions in the pharmaceutical and nutrition sectors. We proudly serve as a GMP-certified chemical manufacturer and a global leader.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-4 p-6 bg-white rounded-xl shadow-sm border border-surface-container-highest">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+<div>
+<h4 class="font-bold text-on-surface">GMP-Certified Standards</h4>
+<p class="text-on-surface-variant text-sm mt-1">Adhering to the highest purity levels across our state-of-the-art facilities.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-white rounded-xl shadow-sm border border-surface-container-highest">
+<span class="material-symbols-outlined text-primary text-3xl">science</span>
+<div>
+<h4 class="font-bold text-on-surface">Advanced R&amp;D Hub</h4>
+<p class="text-on-surface-variant text-sm mt-1">Continuous investment in research to develop next-gen compounds.</p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-button uppercase border-b-2 border-primary pb-1 hover:gap-4 transition-all" href="#">
+                        Learn more about our journey
+                    </a>
+</div>
+</div>
+</section>
+<!-- Markets Bento Grid -->
+<section class="px-margin-desktop py-section-padding bg-background">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy">
+                            Core Industry <span class="text-primary italic">Markets</span>
+</h2>
+<p class="text-on-surface-variant max-w-xl">
+                            Supplying innovative solutions across the most critical health and nutrition sectors globally.
+                        </p>
+</div>
+<button class="px-8 py-3 border border-primary text-primary rounded-full font-button text-button uppercase hover:bg-primary/5 transition-all">
+                        Explore All Sectors
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-bento-gap">
+<!-- Pharmaceuticals -->
+<div class="md:col-span-8 bento-card bg-white rounded-xl p-10 border border-surface-container-highest shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[400px]">
+<div class="relative z-10 max-w-md">
+<div class="w-12 h-12 bg-primary-container/10 rounded-lg flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined">vaccines</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Pharmaceuticals</h3>
+<p class="text-on-surface-variant mb-6">
+                                Our high-performance APIs, developed in FDA-approved manufacturing environments, meet stringent pharmaceutical regulatory compliance standards globally.
+                            </p>
+<a class="text-primary font-bold flex items-center gap-2" href="#">View Compliance <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-3/4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[200px] text-primary">biotech</span>
+</div>
+</div>
+<!-- Nutritional Supplements -->
+<div class="md:col-span-4 bento-card bg-deep-navy text-white rounded-xl p-10 shadow-xl flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-primary-fixed mb-6">
+<span class="material-symbols-outlined">vital_signs</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Nutritional Supplements</h3>
+<p class="text-white/70">
+                                Trusted nutraceutical ingredients, including fine-grade vitamins &amp; derivatives for complex health-focused formulations.
+                            </p>
+</div>
+<a class="text-primary-fixed font-bold mt-8 flex items-center gap-2" href="#">Explore Range <span class="material-symbols-outlined">north_east</span></a>
+</div>
+<!-- Food Additives -->
+<div class="md:col-span-4 bento-card bg-surface-container-low rounded-xl p-10 border border-surface-container-highest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Food Additives</h3>
+<p class="text-on-surface-variant">
+                                Enhancing taste profiles, texture, and extending shelf life while ensuring unmatched global safety standards.
+                            </p>
+</div>
+<a class="text-primary font-bold mt-8 flex items-center gap-2" href="#">Formulations <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<!-- Bespoke Formulations -->
+<div class="md:col-span-8 bento-card bg-primary text-white rounded-xl p-10 shadow-xl relative overflow-hidden flex items-center">
+<div class="relative z-10 grid md:grid-cols-2 gap-8 items-center w-full">
+<div>
+<h3 class="font-headline-md text-headline-md mb-4">Bespoke Formulations</h3>
+<p class="text-white/80">Need a specific chemical profile? Our R&amp;D team creates custom solutions for global partners.</p>
+</div>
+<div class="flex justify-end">
+<button class="px-8 py-4 bg-white text-primary rounded-full font-button text-button uppercase shadow-lg">Start Collaboration</button>
+</div>
+</div>
+<div class="absolute -right-20 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Innovation Grid Section -->
+<section class="px-margin-desktop py-section-padding bg-surface-container-low/50">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div class="space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy leading-tight">
+                            Advancing <span class="text-primary italic">Health</span> Through Innovation
+                        </h2>
+<p class="text-body-lg text-on-surface-variant">
+                            At Aditya Chemicals, we believe innovation is the key to unlocking a healthier future. Our dedicated R&amp;D team spearheads cutting-edge research.
+                        </p>
+</div>
+<div class="space-y-10">
+<div class="flex gap-6 group">
+<span class="text-4xl font-extrabold text-primary-fixed-dim group-hover:text-primary transition-colors">01</span>
+<div>
+<h4 class="text-xl font-bold text-deep-navy mb-2">Pioneering Solutions</h4>
+<p class="text-on-surface-variant">Constantly developing new and improved products to address the evolving needs of clients.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<span class="text-4xl font-extrabold text-primary-fixed-dim group-hover:text-primary transition-colors">02</span>
+<div>
+<h4 class="text-xl font-bold text-deep-navy mb-2">Uncompromising Quality</h4>
+<p class="text-on-surface-variant">Leveraging the latest technologies to ensure the highest safety standards in every product.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<span class="text-4xl font-extrabold text-primary-fixed-dim group-hover:text-primary transition-colors">03</span>
+<div>
+<h4 class="text-xl font-bold text-deep-navy mb-2">Global Impact</h4>
+<p class="text-on-surface-variant">Driven by our mission to improve wellness worldwide through API and premix development.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="rounded-xl overflow-hidden shadow-lg h-[300px]">
+<img class="w-full h-full object-cover" data-alt="A detailed, macro photo of a scientist in a laboratory environment, looking into a high-precision microscope. The scene is lit with clinical, cool-white lights against a deep blue and white background, echoing a monochromatic blue professional aesthetic. The mood is one of intense focus and scientific discovery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABNXYRlzCjLNTRovo7f0UvXDAsAUlJp7xtS0jKkl-uhNFTWz_81DWbp_i42gph8IuaOmybV-jjMVKRgEDqfX1noXYGRggV6VaWXZCdM2jcIINiLtauX7zZ8ky3vGO2BkMNv2OrcckH8AMQFiFZB-Cad-L_UYuEvyhvDBAZ5iSnSPEISLiq02b7lXKm34d-We448tXksAskzeApLR8YHQyKQzB6zzyBK8xT-02lsODuxDh_w1WKKPdMDnf4E1vrpv2C5fOtJmOo1Bej"/>
+</div>
+<div class="bg-primary p-8 rounded-xl text-white">
+<p class="text-3xl font-bold">100%</p>
+<p class="text-sm font-label-caps uppercase opacity-80">Safety Verification</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white p-8 rounded-xl border border-surface-container-highest shadow-sm">
+<span class="material-symbols-outlined text-primary text-5xl mb-4">analytics</span>
+<p class="text-on-surface-variant text-sm">Advanced Analytical Testing on every batch produced.</p>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg h-[350px]">
+<img class="w-full h-full object-cover" data-alt="A high-contrast photo of pharmaceutical capsules and powder artfully arranged on a clean, white reflective surface. The image uses soft blue shadows and pristine white lighting to convey purity and quality. The style is minimalist and high-end corporate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZklrdTCPGVEa6b-kIWFMEL6HXlabs0RC6OSYIlEzT9srshGveodEHyIC26WIt3kUFAFNI7-K9DkAz_J1C-DuuvWp7yn_BClzjQ0v3UZmRyjVA2PUDO_5KRscEMQUXaPtGH2PJyM7Ddhr1ydmDJ-Y26EB0Gi0-4iCHsEcESqsV8ipOukKI-GXkWUPdyb0B1f_6OmVr17FiIZhREX7nEK3ICYDqIbuuN57o0Lpz1Z-GfsmajB3QoeXvLRLKnKRQLURvQsBdqH7sm8Cn"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-desktop py-24 relative overflow-hidden">
+<div class="max-w-container-max mx-auto bg-deep-navy rounded-xl p-16 md:p-24 text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-vibrant-azure rounded-full blur-[120px]"></div>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-white">
+                        Ready to innovate <br/>with us?
+                    </h2>
+<p class="text-white/70 text-body-lg">
+                        We build partnerships founded on collaborative innovation. Trusted globally. Crafted precisely. Aditya Chemicals - Powering Purity for Over 30 Years.
+                    </p>
+<button class="px-12 py-6 bg-vibrant-azure text-white rounded-full font-button text-button uppercase shadow-2xl hover:scale-105 transition-transform">
+                        Connect with our Experts
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-bento-gap bg-deep-navy dark:bg-black text-body-md font-body-md rounded-t-lg">
+<div class="space-y-6">
+<span class="font-headline-md text-headline-md text-surface-bright font-bold">Aditya Chemicals</span>
+<p class="text-surface-variant/80">
+                Delivering Excellence in APIs and Food Additives Worldwide. Powering Purity for Over 30 Years.
+            </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="LinkedIn" class="w-5 h-5 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhRKQdCRwlo7AnmipO969WDKllEMtaY6psu22ccxJLOqmmYFUNdYW3O4fjygnCMKV7tDpuTK_ALFEwxnsFyVPJYQWh-phVegqFKnEkxj-2J-6QxJbugV_txoEAE0xMGoRlTKYrGNDlaHIbT7J3OQZgZdwJoGKA5J-cjNbAkHijR4WJfkeaRxr5ipJMu6rf43G9w1kx5irpAsR7cSvxSuCUdOdDO-Ibd9EQ62ZuHtHS7uyk8rfxQBAVw1ejE6LwRGlab-vTdY0k_tj5"/>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-surface-bright uppercase text-sm tracking-wider">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant/80 hover:text-surface-bright transition-transform hover:translate-x-1 inline-block" href="#">About Us</a></li>
+<li><a class="text-surface-variant/80 hover:text-surface-bright transition-transform hover:translate-x-1 inline-block" href="#">Certificates</a></li>
+<li><a class="text-surface-variant/80 hover:text-surface-bright transition-transform hover:translate-x-1 inline-block" href="#">Contact Us</a></li>
+<li><a class="text-surface-variant/80 hover:text-surface-bright transition-transform hover:translate-x-1 inline-block" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-surface-bright uppercase text-sm tracking-wider">Our Products</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant/80 hover:text-surface-bright transition-transform hover:translate-x-1 inline-block" href="#">Amino Acids</a></li>
+<li><a class="text-surface-variant/80 hover:text-surface-bright transition-transform hover:translate-x-1 inline-block" href="#">Chelated Minerals</a></li>
+<li><a class="text-surface-variant/80 hover:text-surface-bright transition-transform hover:translate-x-1 inline-block" href="#">Vitamins</a></li>
+<li><a class="text-surface-variant/80 hover:text-surface-bright transition-transform hover:translate-x-1 inline-block" href="#">Excipients</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-surface-bright uppercase text-sm tracking-wider">Get in Touch</h4>
+<div class="space-y-4 text-surface-variant/80">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-fixed">location_on</span>
+<span>24-25, Ajanta Industrial Estate, Vasna-Iyava, Sanand, Ahmedabad - 382110</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">call</span>
+<span>079 26854545</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">mail</span>
+<span>info@adityachemicals.in</span>
+</div>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-surface-variant/60">
+<p>© 2024 Aditya Chemicals. High-Purity Kinetic Purity.</p>
+<div class="flex gap-8">
+<a class="hover:text-surface-bright" href="#">Privacy Policy</a>
+<a class="hover:text-surface-bright" href="#">Terms of Use</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.95)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = '';
+            });
+        });
+
+        // Intersection Observer for bento cards entrance
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

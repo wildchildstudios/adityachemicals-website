@@ -1,0 +1,141 @@
+import Link from "next/link";
+import ScrollBackground from "@/components/ScrollBackground";
+
+export const metadata = {
+  title: "Our Certificates | Aditya Chemicals",
+  description: "Browse and download official quality, safety, and regulatory compliance certifications for Aditya Chemicals.",
+};
+
+interface Certificate {
+  name: string;
+  url: string;
+  subtitle: string;
+}
+
+const certificatesList: Certificate[] = [
+  {
+    name: "Halal",
+    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Halal.pdf",
+    subtitle: "Global Dietary Halal Compliance",
+  },
+  {
+    name: "Kosher",
+    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Kosher.pdf",
+    subtitle: "Jewish Dietary Laws Certification",
+  },
+  {
+    name: "FDCA FORM 28",
+    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Drug-Licence-FORM-28.pdf",
+    subtitle: "State Drug Administration License",
+  },
+  {
+    name: "ISO 9001-2015",
+    url: "https://adityachemicals.in/wp-content/uploads/2025/07/ISO-9001-2015.pdf",
+    subtitle: "Quality Management System Standards",
+  },
+  {
+    name: "Good Manufacturing Practices (GMP)",
+    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Good-Manufacturing-Practices-GMP.pdf",
+    subtitle: "Certified Manufacturing Standard for APIs",
+  },
+  {
+    name: "Good Laboratory Practices (GLP)",
+    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Good-Laboratory-Practices-GLP.pdf",
+    subtitle: "Certified Quality Control Testing Standards",
+  },
+  {
+    name: "FSSAI",
+    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Food-Safety-and-Standards-Authority-of-India-FSSAI.pdf",
+    subtitle: "Food Safety Standards Authority of India License",
+  },
+  {
+    name: "Drug Licence FORM 25",
+    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Drug-Licence-FORM-25.pdf",
+    subtitle: "State Food and Drug Control Administration",
+  },
+  {
+    name: "Food Safety System Certification 22000 (FSSC 22000)",
+    url: "https://www.adityachemicals.in/wp-content/uploads/2025/10/FSSC-22000.pdf",
+    subtitle: "Global Food Safety Initiative Standard",
+  },
+  {
+    name: "ICH Q7 Good Manufacturing Practices for APIs",
+    url: "https://www.adityachemicals.in/wp-content/uploads/2025/12/SGS_ICH-Q7-GMP-for-APIs_IN2500001008_EN.pdf",
+    subtitle: "SGS Certified Active Pharmaceutical Ingredient GMP",
+  },
+];
+
+export default function CertificatesPage() {
+  return (
+    <>
+      <ScrollBackground />
+
+      {/* Page Header */}
+      <div data-bg-color="#faf8ff" className="py-20 px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-container-max mx-auto space-y-4 text-center md:text-left">
+          <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-label-caps uppercase select-none">
+            Regulatory Compliance
+          </span>
+          <h1 className="font-display-lg-mobile md:font-display-lg text-deep-navy tracking-tight mt-4">
+            Certificates &amp; <span className="text-primary italic">Licensing</span>
+          </h1>
+          <p className="font-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            Aditya Chemicals is committed to maintaining the highest global standards in quality and safety. We hold all necessary drug manufacturing, laboratory, food safety, and dietary compliance credentials.
+          </p>
+        </div>
+      </div>
+
+      {/* Grid List */}
+      <div data-bg-color="#ffffff" className="py-12 bg-white px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-container-max mx-auto space-y-12">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certificatesList.map((cert, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-2xl border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-6"
+              >
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/5 text-primary flex items-center justify-center">
+                    <span className="material-symbols-outlined select-none">verified</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-deep-navy">{cert.name}</h3>
+                    <p className="text-xs text-on-surface-variant font-medium mt-1">{cert.subtitle}</p>
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-2 px-5 py-3 border border-primary text-primary hover:bg-primary/5 rounded-full font-button text-xs uppercase transition-all duration-200 cursor-pointer font-bold tracking-wider"
+                  >
+                    Download PDF
+                    <span className="material-symbols-outlined text-sm select-none">picture_as_pdf</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Compliance CTA */}
+          <div className="bg-surface-container-low p-8 md:p-12 rounded-3xl border border-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+            <div className="space-y-2 text-center md:text-left max-w-2xl">
+              <h3 className="text-xl font-bold text-deep-navy">Looking for specific documentation?</h3>
+              <p className="text-on-surface-variant text-sm font-medium">
+                If you require Batch Certificates of Analysis (COA), Allergen Statements, GMO declarations, or specific Technical Dossiers (DMF), please connect directly with our compliance desk.
+              </p>
+            </div>
+            <Link href="/contact?request=compliance">
+              <button className="px-8 py-4 bg-primary text-white rounded-full font-button text-button uppercase hover:scale-[0.98] transition-all duration-250 shadow-md cursor-pointer font-bold tracking-wider whitespace-nowrap">
+                Contact Compliance
+              </button>
+            </Link>
+          </div>
+
+        </div>
+      </div>
+    </>
+  );
+}
