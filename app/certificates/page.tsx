@@ -2,8 +2,8 @@ import Link from "next/link";
 import ScrollBackground from "@/components/ScrollBackground";
 
 export const metadata = {
-  title: "Our Certificates | Aditya Chemicals",
-  description: "Browse and download official quality, safety, and regulatory compliance certifications for Aditya Chemicals.",
+  title: "Quality Certifications & Compliance | Aditya Chemicals WHO-GMP ISO",
+  description: "Download Aditya Chemicals' official quality and regulatory certifications including WHO-GMP, ISO, Halal, Kosher, and compliance documentation for the USA, EU, and UK.",
 };
 
 interface Certificate {

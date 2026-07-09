@@ -4,8 +4,8 @@ import ScrollBackground from "@/components/ScrollBackground";
 import { productCategories } from "@/data/products";
 
 export const metadata = {
-  title: "Products Hub | Aditya Chemicals",
-  description: "Explore the main product lines of Aditya Chemicals: Amino Acids & Derivatives, Chelated Minerals, Vitamins & Derivatives, and Excipients.",
+  title: "Products Directory | Bulk APIs & Chelated Minerals | Aditya Chemicals",
+  description: "Browse Aditya Chemicals' comprehensive catalog of high-purity compounds: Amino Acids & Derivatives, Chelated Minerals, Vitamins, and Specialty Excipients.",
 };
 
 export default function ProductsHubPage() {

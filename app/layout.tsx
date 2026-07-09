@@ -17,8 +17,16 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Aditya Chemicals | Precision Chemistry, High-Performance Global Impact",
-  description: "Recognized among the top API manufacturing companies globally, delivering pharmaceutical and nutrition excellence since 1992. We build the chemistry that performs.",
+  title: {
+    default: "Aditya Chemicals | GMP Certified API & Chelated Minerals Manufacturer",
+    template: "%s | Aditya Chemicals"
+  },
+  description: "Aditya Chemicals is a leading global API & Chelated Minerals manufacturer. FDA-registered & GMP-certified bulk supplier of Amino Acids, Excipients, and Vitamins to the USA, UK, Europe, and Asia.",
+  keywords: [
+    "chemical manufacturer", "API manufacturing company", "bulk chelated minerals supplier", 
+    "amino acids exporter", "GMP certified factory", "FDA registered chemical plant", 
+    "USA chemical supplier", "Europe chemical exporter", "UK compliant chemical manufacturing"
+  ],
 };
 
 export default function RootLayout({

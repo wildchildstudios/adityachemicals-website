@@ -20,9 +20,13 @@ export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return {};
+  
+  const compliance = product.details?.grade ? ` Compliant with ${product.details.grade}` : "";
+  
   return {
-    title: `${product.name} (CAS ${product.casNumber}) | Aditya Chemicals`,
-    description: `High-purity chemical compound ${product.name}. CAS Number: ${product.casNumber}. Category: ${product.categoryTag}.`,
+    title: `${product.name} (CAS ${product.casNumber}) Bulk Supplier & Manufacturer`,
+    description: `Buy high-purity ${product.name} (CAS Registry No. ${product.casNumber}) in bulk.${compliance} GMP-certified manufacturing, reliable global shipping to USA, Europe, UK, and Asia.`,
+    keywords: `${product.name}, CAS ${product.casNumber}, bulk ${product.name}, buy ${product.name}, ${product.name} manufacturer, ${product.name} supplier, USP grade ${product.name}, BP grade ${product.name}`,
   };
 }
 
@@ -37,9 +41,68 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const parentCat = getCategoryBySlug(product.parentCategorySlug);
   const subCat = product.subCategorySlug ? getCategoryBySlug(product.subCategorySlug) : null;
 
+  // Build chemical-specific JSON-LD Product schema
+  const productSchema: any = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "image": `https://www.adityachemicals.in${product.imagePath}`,
+    "description": product.description || `High-purity industrial chemical compound ${product.name}. CAS Number: ${product.casNumber}. Category: ${product.categoryTag}.`,
+    "category": product.categoryTag,
+    "mpn": product.casNumber,
+    "brand": {
+      "@type": "Brand",
+      "name": "Aditya Chemicals"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": "Contact for Pricing",
+      "offerCount": "1",
+      "seller": {
+        "@type": "Organization",
+        "name": "Aditya Chemicals"
+      }
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "CAS Registry Number",
+        "value": product.casNumber
+      }
+    ]
+  };
+
+  if (product.details?.formula) {
+    productSchema.additionalProperty.push({
+      "@type": "PropertyValue",
+      "name": "Chemical Formula",
+      "value": product.details.formula
+    });
+  }
+  if (product.details?.weight) {
+    productSchema.additionalProperty.push({
+      "@type": "PropertyValue",
+      "name": "Molecular Weight",
+      "value": product.details.weight
+    });
+  }
+  if (product.details?.grade) {
+    productSchema.additionalProperty.push({
+      "@type": "PropertyValue",
+      "name": "Grades",
+      "value": product.details.grade
+    });
+  }
+
   return (
     <>
       <ScrollBackground />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
 
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 space-y-12">
         {/* Breadcrumbs */}

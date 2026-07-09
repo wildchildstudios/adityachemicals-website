@@ -20,9 +20,16 @@ export async function generateMetadata({ params }: PageProps) {
   const { category: categorySlug } = await params;
   const category = getCategoryBySlug(categorySlug);
   if (!category) return {};
+  
+  const isSubcat = !!category.parentCategorySlug;
+  const title = isSubcat 
+    ? `Bulk ${category.name} Chelates & Compounds Manufacturer` 
+    : `${category.name} Manufacturer & Bulk Supplier`;
+    
   return {
-    title: `${category.name} | Aditya Chemicals`,
-    description: category.description,
+    title: title,
+    description: `${category.description} High-purity, GMP-certified chemical ingredients supplied in bulk to pharmaceutical, nutraceutical, and food industries across the USA, UK, Europe, and globally.`,
+    keywords: `${category.name}, bulk ${category.name}, ${category.name} supplier, ${category.name} manufacturer, GMP certified ${category.name}, pharmaceutical grade ${category.name}`,
   };
 }
 

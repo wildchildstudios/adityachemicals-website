@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Events & Exhibitions | Aditya Chemicals",
-  description: "Explore the global exhibitions, trade shows, and events where Aditya Chemicals showcases its APIs and food additives.",
+  title: "Global Exhibitions & Events | Aditya Chemicals CPhI IFT",
+  description: "Stay updated on the international pharma and food ingredient trade shows (CPhI, IFT, Fi Europe) where Aditya Chemicals showcases compliance and manufacturing innovations.",
 };
 
 interface EventItem {

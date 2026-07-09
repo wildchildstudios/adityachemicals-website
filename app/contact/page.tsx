@@ -7,8 +7,8 @@ interface PageProps {
 }
 
 export const metadata = {
-  title: "Contact Us | Aditya Chemicals",
-  description: "Get in touch with Aditya Chemicals. Reach out to our offices, manufacturing plant, or USA warehouse for sales, support, and inquiries.",
+  title: "Contact Aditya Chemicals | Global Sales Office & USA Warehouse",
+  description: "Get in touch with Aditya Chemicals' sales team. Contact our headquarters in India, manufacturing plant, or Boca Raton, FL (USA) warehouse for bulk orders & sample requests.",
 };
 
 export default async function ContactPage({ searchParams }: PageProps) {

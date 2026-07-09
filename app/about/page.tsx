@@ -3,8 +3,8 @@ import Link from "next/link";
 import ScrollBackground from "@/components/ScrollBackground";
 
 export const metadata = {
-  title: "About Us | Aditya Chemicals",
-  description: "Established in 1992, Aditya Chemicals is a GMP-certified chemical manufacturer and global leader in APIs, food additives, and excipients.",
+  title: "About Aditya Chemicals | Global API & Chelated Minerals Factory",
+  description: "Established in 1992, Aditya Chemicals is a GMP-certified chemical manufacturer and global leader in high-purity APIs, mineral chelates, and excipients supplying the USA, Europe, and UK.",
 };
 
 export default function AboutPage() {
