@@ -48,7 +48,7 @@ export const footerLinks = {
   contact: {
     title: "Contact Us",
     phone: "079 2685 4545",
-    email: "info@adityachemicals.in",
+    email: "info@adityachemicals.com",
     address: "204, President Plaza, Nr. Thaltej Cross Road, S. G. Highway, Ahmedabad",
   },
 };

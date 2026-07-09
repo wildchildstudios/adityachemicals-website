@@ -167,7 +167,7 @@ export const products: Product[] = [
       "Premixes & Nutritional Blends : Integrated into customized ingredient blends and nutritional premix applications.",
       "Animal Nutrition: Utilized in feed additives, premixes, and nutritional products developed for animal nutrition applications.",
       "L Carnitine Fumarate",
-      "URL: https://www.adityachemicals.in/l-carnitine-fumarate-manufacturer/",
+      "URL: https://www.adityachemicals.com/l-carnitine-fumarate-manufacturer/",
       "Meta Title: L-Carnitine Fumarate Manufacturer & Bulk Supplier",
       "Meta Description: Leading L-Carnitine Fumarate manufacturer offers high-purity ingredients for sports nutrition, wellness, energy & dietary supplement formulations worldwide."
     ]
@@ -212,7 +212,7 @@ export const products: Product[] = [
       "Pharmaceutical Use: Used in health care and clinical goods that require high-quality carnitine ingredients.",
       "Protein & Fitness Nutrition: Are able to be used in combination formulations with vitamins, standardized amino acids, minerals and general wellness ingredients.",
       "L Carnitine L Aspartate",
-      "URL: https://www.adityachemicals.in/l-carnitine-fumarate-manufacturer/",
+      "URL: https://www.adityachemicals.com/l-carnitine-fumarate-manufacturer/",
       "Meta Title: L-Carnitine Fumarate Manufacturer & Bulk Supplier",
       "Meta Description: Leading L-Carnitine Fumarate manufacturer offers high-purity ingredients for sports nutrition, wellness, energy & dietary supplement formulations worldwide."
     ]
@@ -256,7 +256,7 @@ export const products: Product[] = [
       "Collagen & Protein Formulations: Used in collagen-based and protein-enriched product concepts.",
       "Animal Nutrition: Applicable in feed additives and nutritional products for animal health applications.",
       "DL-Methionine",
-      "URL: https://www.adityachemicals.in/dl-methionine-manufacturer",
+      "URL: https://www.adityachemicals.com/dl-methionine-manufacturer",
       "Meta Title: DL-Methionine Manufacturer in India | Global Supplier",
       "Meta Description: Trusted DL-Methionine manufacturer providing high-purity amino acid ingredients for pharmaceutical, nutraceutical, food, and animal nutrition products."
     ]
@@ -301,7 +301,7 @@ export const products: Product[] = [
       "Functional Nutrition Products: Used across modern nutritional product formulations.",
       "Pharmaceutical Formulations: Suitable for selected pharmaceutical and nutritional product development.",
       "L-CARNITINE OROTATE",
-      "URL: https://www.adityachemicals.in//l-carnitine-orotate-manufacturer/",
+      "URL: https://www.adityachemicals.com//l-carnitine-orotate-manufacturer/",
       "Meta Title: L Carnitine Orotate Manufacturer | Nutraceutical Grade",
       "Meta Description: L Carnitine Orotate supports cellular energy and mitochondrial function. Ideal ingredient for advanced nutraceutical and performance formulas."
     ]
@@ -396,7 +396,7 @@ export const products: Product[] = [
       "Functional Food & Beverage Products:",
       "Suitable for nutritional beverages, drink mixes, fortified foods, and other functional nutrition applications.",
       "L Carnitine L Tartrate",
-      "URL: https://www.adityachemicals.in/l-carnitine-l-tartrate-manufacturer/",
+      "URL: https://www.adityachemicals.com/l-carnitine-l-tartrate-manufacturer/",
       "Meta Title: L Carnitine L Tartrate Manufacturer & Supplier | Aditya Chemicals",
       "Meta Description: L Carnitine L Tartrate manufacturer supplying nutraceutical-grade ingredients for sports nutrition, dietary supplements, wellness, and functional nutrition products."
     ]

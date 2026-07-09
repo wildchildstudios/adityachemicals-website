@@ -25,8 +25,8 @@ export default function Home() {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Aditya Chemicals",
-              "url": "https://www.adityachemicals.in",
-              "logo": "https://www.adityachemicals.in/aditya_logo.png",
+              "url": "https://www.adityachemicals.com",
+              "logo": "https://www.adityachemicals.com/aditya_logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-79-26854545",
@@ -40,7 +40,7 @@ export default function Home() {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Aditya Chemicals Corporate Office",
-              "image": "https://www.adityachemicals.in/aditya_logo.png",
+              "image": "https://www.adityachemicals.com/aditya_logo.png",
               "telephone": "+91-79-26854545",
               "address": {
                 "@type": "PostalAddress",
@@ -61,7 +61,7 @@ export default function Home() {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Aditya Chemicals USA Warehouse",
-              "image": "https://www.adityachemicals.in/aditya_logo.png",
+              "image": "https://www.adityachemicals.com/aditya_logo.png",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "6750 East Roger Circle",

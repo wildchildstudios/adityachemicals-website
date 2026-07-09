@@ -15,52 +15,52 @@ interface Certificate {
 const certificatesList: Certificate[] = [
   {
     name: "Halal",
-    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Halal.pdf",
+    url: "https://adityachemicals.com/wp-content/uploads/2025/07/Halal.pdf",
     subtitle: "Global Dietary Halal Compliance",
   },
   {
     name: "Kosher",
-    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Kosher.pdf",
+    url: "https://adityachemicals.com/wp-content/uploads/2025/07/Kosher.pdf",
     subtitle: "Jewish Dietary Laws Certification",
   },
   {
     name: "FDCA FORM 28",
-    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Drug-Licence-FORM-28.pdf",
+    url: "https://adityachemicals.com/wp-content/uploads/2025/07/Drug-Licence-FORM-28.pdf",
     subtitle: "State Drug Administration License",
   },
   {
     name: "ISO 9001-2015",
-    url: "https://adityachemicals.in/wp-content/uploads/2025/07/ISO-9001-2015.pdf",
+    url: "https://adityachemicals.com/wp-content/uploads/2025/07/ISO-9001-2015.pdf",
     subtitle: "Quality Management System Standards",
   },
   {
     name: "Good Manufacturing Practices (GMP)",
-    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Good-Manufacturing-Practices-GMP.pdf",
+    url: "https://adityachemicals.com/wp-content/uploads/2025/07/Good-Manufacturing-Practices-GMP.pdf",
     subtitle: "Certified Manufacturing Standard for APIs",
   },
   {
     name: "Good Laboratory Practices (GLP)",
-    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Good-Laboratory-Practices-GLP.pdf",
+    url: "https://adityachemicals.com/wp-content/uploads/2025/07/Good-Laboratory-Practices-GLP.pdf",
     subtitle: "Certified Quality Control Testing Standards",
   },
   {
     name: "FSSAI",
-    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Food-Safety-and-Standards-Authority-of-India-FSSAI.pdf",
+    url: "https://adityachemicals.com/wp-content/uploads/2025/07/Food-Safety-and-Standards-Authority-of-India-FSSAI.pdf",
     subtitle: "Food Safety Standards Authority of India License",
   },
   {
     name: "Drug Licence FORM 25",
-    url: "https://adityachemicals.in/wp-content/uploads/2025/07/Drug-Licence-FORM-25.pdf",
+    url: "https://adityachemicals.com/wp-content/uploads/2025/07/Drug-Licence-FORM-25.pdf",
     subtitle: "State Food and Drug Control Administration",
   },
   {
     name: "Food Safety System Certification 22000 (FSSC 22000)",
-    url: "https://www.adityachemicals.in/wp-content/uploads/2025/10/FSSC-22000.pdf",
+    url: "https://www.adityachemicals.com/wp-content/uploads/2025/10/FSSC-22000.pdf",
     subtitle: "Global Food Safety Initiative Standard",
   },
   {
     name: "ICH Q7 Good Manufacturing Practices for APIs",
-    url: "https://www.adityachemicals.in/wp-content/uploads/2025/12/SGS_ICH-Q7-GMP-for-APIs_IN2500001008_EN.pdf",
+    url: "https://www.adityachemicals.com/wp-content/uploads/2025/12/SGS_ICH-Q7-GMP-for-APIs_IN2500001008_EN.pdf",
     subtitle: "SGS Certified Active Pharmaceutical Ingredient GMP",
   },
 ];

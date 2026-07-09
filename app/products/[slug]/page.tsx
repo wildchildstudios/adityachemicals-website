@@ -46,7 +46,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
-    "image": `https://www.adityachemicals.in${product.imagePath}`,
+    "image": `https://www.adityachemicals.com${product.imagePath}`,
     "description": product.description || `High-purity industrial chemical compound ${product.name}. CAS Number: ${product.casNumber}. Category: ${product.categoryTag}.`,
     "category": product.categoryTag,
     "mpn": product.casNumber,

@@ -10,12 +10,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "www.adityachemicals.in",
+        hostname: "www.adityachemicals.com",
         pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "adityachemicals.in",
+        hostname: "adityachemicals.com",
         pathname: "/**",
       },
     ],

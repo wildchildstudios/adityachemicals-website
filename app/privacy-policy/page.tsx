@@ -23,12 +23,12 @@ export default function PrivacyPolicyPage() {
           <p>
             Our website address is:{" "}
             <a
-              href="https://www.adityachemicals.in"
+              href="https://www.adityachemicals.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary font-bold hover:underline"
             >
-              https://www.adityachemicals.in
+              https://www.adityachemicals.com
             </a>
           </p>
         </section>
