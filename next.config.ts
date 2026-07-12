@@ -20,6 +20,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/cphi",
+        destination: "/IFT_Brochure.pdf",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -167,7 +167,7 @@ export const products: Product[] = [
       "Premixes & Nutritional Blends : Integrated into customized ingredient blends and nutritional premix applications.",
       "Animal Nutrition: Utilized in feed additives, premixes, and nutritional products developed for animal nutrition applications.",
       "L Carnitine Fumarate",
-      "URL: https://www.adityachemicals.com/l-carnitine-fumarate-manufacturer/",
+      "URL: https://www.adityachemicals.in/l-carnitine-fumarate-manufacturer/",
       "Meta Title: L-Carnitine Fumarate Manufacturer & Bulk Supplier",
       "Meta Description: Leading L-Carnitine Fumarate manufacturer offers high-purity ingredients for sports nutrition, wellness, energy & dietary supplement formulations worldwide."
     ]
@@ -212,7 +212,7 @@ export const products: Product[] = [
       "Pharmaceutical Use: Used in health care and clinical goods that require high-quality carnitine ingredients.",
       "Protein & Fitness Nutrition: Are able to be used in combination formulations with vitamins, standardized amino acids, minerals and general wellness ingredients.",
       "L Carnitine L Aspartate",
-      "URL: https://www.adityachemicals.com/l-carnitine-fumarate-manufacturer/",
+      "URL: https://www.adityachemicals.in/l-carnitine-fumarate-manufacturer/",
       "Meta Title: L-Carnitine Fumarate Manufacturer & Bulk Supplier",
       "Meta Description: Leading L-Carnitine Fumarate manufacturer offers high-purity ingredients for sports nutrition, wellness, energy & dietary supplement formulations worldwide."
     ]
@@ -256,7 +256,7 @@ export const products: Product[] = [
       "Collagen & Protein Formulations: Used in collagen-based and protein-enriched product concepts.",
       "Animal Nutrition: Applicable in feed additives and nutritional products for animal health applications.",
       "DL-Methionine",
-      "URL: https://www.adityachemicals.com/dl-methionine-manufacturer",
+      "URL: https://www.adityachemicals.in/dl-methionine-manufacturer",
       "Meta Title: DL-Methionine Manufacturer in India | Global Supplier",
       "Meta Description: Trusted DL-Methionine manufacturer providing high-purity amino acid ingredients for pharmaceutical, nutraceutical, food, and animal nutrition products."
     ]
@@ -268,7 +268,7 @@ export const products: Product[] = [
     "categoryTag": "Amino Acids and Derivatives",
     "parentCategorySlug": "amino-acids-derivatives",
     "imagePath": "/aditya chemicals images/Amino Acids and Derivatives/product cards/L Carnitine L Tartrate.png",
-    "description": "",
+    "description": "Aditya Chemical’s L-Carnitine L-Tartrate (LCLT) is a highly bioavailable form of L-carnitine, commonly used as a dietary supplement to support energy production, athletic performance, and recovery. It helps transport fatty acids into the mitochondria for energy metabolism, making it popular among athletes and fitness enthusiasts for reducing muscle soreness and enhancing endurance. Additionally, it supports overall metabolic health, fat utilization, and cellular energy balance, contributing to its use in weight management and wellness supplements.",
     "details": {
       "formula": "C₁₈H₃₆N₂O₁₂",
       "weight": "472.49 g/mol",
@@ -301,7 +301,7 @@ export const products: Product[] = [
       "Functional Nutrition Products: Used across modern nutritional product formulations.",
       "Pharmaceutical Formulations: Suitable for selected pharmaceutical and nutritional product development.",
       "L-CARNITINE OROTATE",
-      "URL: https://www.adityachemicals.com//l-carnitine-orotate-manufacturer/",
+      "URL: https://www.adityachemicals.in//l-carnitine-orotate-manufacturer/",
       "Meta Title: L Carnitine Orotate Manufacturer | Nutraceutical Grade",
       "Meta Description: L Carnitine Orotate supports cellular energy and mitochondrial function. Ideal ingredient for advanced nutraceutical and performance formulas."
     ]
@@ -312,7 +312,8 @@ export const products: Product[] = [
     "casNumber": "7675-83-4",
     "categoryTag": "Amino Acids and Derivatives",
     "parentCategorySlug": "amino-acids-derivatives",
-    "imagePath": "/aditya chemicals images/Amino Acids and Derivatives/product cards/Arginine Aspartate.png"
+    "imagePath": "/aditya chemicals images/Amino Acids and Derivatives/product cards/Arginine Aspartate.png",
+    "description": "Aditya chemicals offers a high purity L-Arginine L-aspartate it is a salt composed of L-Arginine  combined with Aspartic Acid, it is intended for the dietary management of metabolic disorders,  including creatine kinase deficiency, this product also has clinical properties that can be used to treat  skin conditions such as dryness and ichthyosis. Aditya chemical’s Arginine aspartate is a  globally trusted ingredient, manufactured with strict quality standards to meet the requirements of  advanced nutraceutical, dietary ingredients, food and pharmaceutical applications."
   },
   {
     "name": "L-Carnitine Orotate",
@@ -321,7 +322,7 @@ export const products: Product[] = [
     "categoryTag": "Amino Acids and Derivatives",
     "parentCategorySlug": "amino-acids-derivatives",
     "imagePath": "/aditya chemicals images/Amino Acids and Derivatives/product cards/L Carnitine Orotate.png",
-    "description": "",
+    "description": "L-Carnitine Orotate is a specialized carnitine salt that combines the metabolic benefits of L-Carnitine with Orotic Acid. It is widely used in sports nutrition, cardiovascular health, and energy-support formulations, where efficient fatty acid metabolism, cellular energy production, and overall metabolic performance are desired. Its favorable stability and formulation compatibility make it suitable for tablets, capsules, powders, sachets, and functional nutrition products.",
     "details": {
       "formula": "C₁₂H₁₉N₃O₇",
       "weight": "317.3 g/mol",
@@ -396,7 +397,7 @@ export const products: Product[] = [
       "Functional Food & Beverage Products:",
       "Suitable for nutritional beverages, drink mixes, fortified foods, and other functional nutrition applications.",
       "L Carnitine L Tartrate",
-      "URL: https://www.adityachemicals.com/l-carnitine-l-tartrate-manufacturer/",
+      "URL: https://www.adityachemicals.in/l-carnitine-l-tartrate-manufacturer/",
       "Meta Title: L Carnitine L Tartrate Manufacturer & Supplier | Aditya Chemicals",
       "Meta Description: L Carnitine L Tartrate manufacturer supplying nutraceutical-grade ingredients for sports nutrition, dietary supplements, wellness, and functional nutrition products."
     ]
@@ -431,12 +432,7 @@ export const products: Product[] = [
       "Pharmaceutical Formulations: Nutritional therapies, amino acid preparations, and clinical nutrition products.",
       "Functional Foods & Beverages: Protein-fortified foods, nutritional drinks, meal replacement products, and fortified health beverages.",
       "Clinical & Medical Nutrition: Enteral nutrition, specialized nutritional formulations, and products designed to address amino acid deficiencies.",
-      "Animal Nutrition: Premixes, livestock feed, poultry nutrition, aquaculture, and pet food formulations to support optimal growth and protein utilization.",
-      "Megnesium",
-      "Magnesium Aspartate",
-      "URL: /magnesium-aspartate-supplier",
-      "Meta Title: Magnesium Aspartate for Energy Support | Aditya Chemicals",
-      "Meta Description: Magnesium aspartate supports energy metabolism and aids muscle recovery. It is well-suited for dietary supplement formulations. Inquire now."
+      "Animal Nutrition: Premixes, livestock feed, poultry nutrition, aquaculture, and pet food formulations to support optimal growth and protein utilization."
     ]
   },
   {
@@ -535,7 +531,6 @@ export const products: Product[] = [
       "Electrolyte & Hydration Products: Used in electrolyte powders, oral rehydration formulations, and hydration beverages to help maintain normal electrolyte balance.",
       "Wellness & Preventive Nutrition: Applied in products targeting bone health, cardiovascular wellness, nerve function, and overall metabolic support.",
       "Custom Nutraceutical Formulations: Ideal for tablets, capsules, sachets, stick packs, effervescent tablets, and powdered blends due to its excellent formulation compatibility.",
-      ".",
       "Magnesium Bis Glycinate",
       "URL: /magnesium-bisglycinate-manufacturer",
       "Meta Title: Magnesium Bis Glycinate for Superior Absorption",
@@ -593,7 +588,7 @@ export const products: Product[] = [
     "parentCategorySlug": "minerals",
     "subCategorySlug": "magnesium",
     "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Citrate.png",
-    "description": "",
+    "description": "Aditya Chemicals offers Magnesium Citrate, a magnesium salt of citric acid widely recognized for its excellent bioavailability. It is used in various nutraceutical and dietary supplement applications,  particularly in formulations promoting digestive, muscular, and metabolic health. Aditya Chemical’s Magnesium Citrate is a trusted choice among industry professionals for its high-quality consistency and formulation versatility.",
     "details": {
       "formula": "C₁₂H₁₀Mg₃O₁₄",
       "weight": "451.11 g/mol",
@@ -634,7 +629,40 @@ export const products: Product[] = [
     "categoryTag": "Magnesium (Chelated Minerals)",
     "parentCategorySlug": "minerals",
     "subCategorySlug": "magnesium",
-    "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Creatine Chelate.png"
+    "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Creatine Chelate.png",
+    "description": "Magnesium Creatine Chelate Magnesium Creatine Chelate is a specialized organo-mineral compound engineered primarily for sports nutrition, strength conditioning, and cellular energy metabolism. Unlike standard physical blends of magnesium and creatine, this ingredient represents a fully reacted molecule where elemental magnesium is chemically bound to the organic ergogenic compound creatine.",
+    "details": {
+      "formula": "C8H16MgN6O4",
+      "weight": "284.56 g/mol",
+      "shelfLife": "5 Years"
+    },
+    "specifications": {
+      "iupacName": "Magnesium;2-[carbamimidoyl(methyl)amino]acetate",
+      "physicalForm": "White to off-white powder",
+      "assay": "NLT 7.0%",
+      "storage": "Preserve in a well-closed container."
+    },
+    "features": [
+      "Dual-Mechanism ATP Resynthesis",
+      "The Creatine Role: It provides the raw substrate necessary for phosphocreatine storage, allowing rapid donation of a phosphate group to turn ADP back into active ATP during high-intensity,  short-duration anaerobic exercise.",
+      "The Magnesium Role: ATP cannot function or be synthesized independently; it must exist as a magnesium-ATP complex to be biologically active. By delivering both elements simultaneously, the molecule ensures that newly resynthesized ATP is immediately stabilized and functional.",
+      "Mitigation of GI Distress: Smooth Digestion: Unabsorbed free creatine particles in the gut draw water, causing cramping and diarrhea. The high stability and absorption rate of this chelate leave no unreacted particles behind, ensuring excellent gut comfort.",
+      "Mitigation of Muscle Cramping & Fasciculations: Beyond just protecting the creatine, the bioavailable magnesium acts directly at the neuromuscular junction. It regulates calcium influx into muscle cells, directly preventing the cramping and involuntary twitching (fasciculations)  often reported by heavy creatine users."
+    ],
+    "applications": [
+      "Sports Nutrition: Widely used in pre-workout, post-workout, strength, endurance, and muscle recovery formulations to support athletic performance.",
+      "Performance Supplements: Incorporated into products designed to support ATP production, muscle power, and exercise capacity for active individuals.",
+      "Dietary Supplements: Used in premium magnesium and creatine formulations that support muscle function, energy metabolism, and overall wellness.",
+      "Muscle Recovery Products: Suitable for recovery supplements formulated to support normal muscle function and reduce post-exercise fatigue.",
+      "Functional Foods & Beverages: Applied in sports drinks, protein powders, nutritional beverages, meal replacements, and functional food products.",
+      "Clinical & Medical Nutrition: Included in specialized nutritional formulations designed to support muscle health and meet increased nutritional requirements.",
+      "Energy & Active Lifestyle Formulations: Used in products targeting sustained energy, physical performance, and fitness-focused nutrition.",
+      "Nutraceutical Formulations: Ideal for tablets, capsules, powders, sachets, stick packs, and ready-to-mix formulations due to its excellent processing compatibility and formulation stability.",
+      "Magnesium Gluconate",
+      "URL: /magnesium-gluconate-supplier",
+      "Meta Title: Magnesium Gluconate for Muscle, Energy & Nerve Support",
+      "Meta Description: Magnesium gluconate promotes overall wellness, aids muscle recovery, & supports nerve health. It is ideal for use in dietary supplement formulations."
+    ]
   },
   {
     "name": "Magnesium Gluconate",
@@ -673,7 +701,7 @@ export const products: Product[] = [
       "Electrolyte & Hydration Products: Included in electrolyte powders, hydration beverages, and oral rehydration formulations to support mineral balance.",
       "Pediatric & Geriatric Nutrition: Suitable for nutritional products developed for children and older adults due to its good solubility and formulation versatility.",
       "Nutraceutical Formulations: Ideal for tablets, capsules, powders, sachets, syrups, and liquid formulations, offering excellent compatibility with a wide range of manufacturing processes.",
-      "Magnesium Pidolate",
+      "Magnesium L-Pidolate",
       "URL: /magnesium-pidolate-supplier",
       "Meta Title: Global Magnesium Pidolate Ingredient Supplier",
       "Meta Description: Export-quality Magnesium Pidolate manufactured for nutraceutical and pharmaceutical applications with trusted quality standards.conect with us."
@@ -737,7 +765,7 @@ export const products: Product[] = [
     "parentCategorySlug": "minerals",
     "subCategorySlug": "magnesium",
     "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Lactate.png",
-    "description": "",
+    "description": "Magnesium Lactate is a gentle, efficiently absorbed magnesium salt widely recognized for its excellent tolerability and metabolic support. It is valued in nutraceutical, dietary, and functional health formulations for its role in muscle function, electrolyte balance, and energy production. Aditya Chemical’s Magnesium Lactate ensures flexibility for various dosage forms and compatibility with tablets, capsules, liquids, beverages, and powdered blends. With reliable purity, superior stability, and consistent performance, it remains a preferred choice for premium-quality magnesium formulations.",
     "details": {
       "formula": "C₆H₁₀MgO₆·2H₂O (dihydrate)",
       "weight": "238.5 g/mol (dihydrate)",
@@ -779,7 +807,7 @@ export const products: Product[] = [
     "parentCategorySlug": "minerals",
     "subCategorySlug": "magnesium",
     "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Malate.png",
-    "description": "",
+    "description": "Aditya Chemicals offers Magnesium Malate, a compound formed from magnesium and malic acid,  offering excellent bioavailability and gastrointestinal tolerance. It is often included in nutraceutical and food formulations targeting energy production, muscle recovery, and metabolic health. Aditya Chemical’s Magnesium Malate is a trusted raw material known for its consistent high quality,  optimal particle size and density, and superior compatibility with various delivery formats.",
     "details": {
       "formula": "C₄H₄MgO₅",
       "weight": "156.38 g/mol",
@@ -819,7 +847,7 @@ export const products: Product[] = [
     "parentCategorySlug": "minerals",
     "subCategorySlug": "magnesium",
     "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Orotate.png",
-    "description": "",
+    "description": "Aditya Chemicals offers Magnesium Malate, a compound formed from magnesium and malic acid,  offering excellent bioavailability and gastrointestinal tolerance. It is often included in nutraceutical and food formulations targeting energy production, muscle recovery, and metabolic health. Aditya Chemical’s Magnesium Malate is a trusted raw material known for its consistent high quality,  optimal particle size and density, and superior compatibility with various delivery formats.",
     "details": {
       "formula": "C₄H₄MgO₅",
       "weight": "156.38 g/mol",
@@ -860,7 +888,7 @@ export const products: Product[] = [
     "parentCategorySlug": "minerals",
     "subCategorySlug": "magnesium",
     "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Succinate.png",
-    "description": "",
+    "description": "Our Magnesium Succinate is a stable, bioavailable form of magnesium chelated with succinic acid. It is widely used in formulations focused on metabolic balance, cellular energy cycles, and oxidative stress management. Aditya Chemical’s Magnesium Succinate is a globally trusted ingredient, manufactured with strict quality standards to meet the requirements of advanced nutraceutical, dietary ingredients, food, and pharmaceutical applications.",
     "details": {
       "formula": "C4H4MgO4",
       "weight": "140.38 g/mol",
@@ -901,7 +929,36 @@ export const products: Product[] = [
     "categoryTag": "Magnesium (Chelated Minerals)",
     "parentCategorySlug": "minerals",
     "subCategorySlug": "magnesium",
-    "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Taurinate.png"
+    "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Taurinate.png",
+    "description": "Magnesium Taurinate (often referred to as Magnesium Taurate) is a highly specialized organo-mineral complex designed primarily for cardiovascular and neurological applications. It is formed by chemically bonding elemental magnesium with taurine, a sulfur-containing amino acid (amino sulfonic acid) that plays a critical role in cellular osmotic regulation and ion transport.",
+    "specifications": {
+      "iupacName": "Magnesium;2-aminoethanesulfonate",
+      "physicalForm": "White to off-white powder.",
+      "storage": "Preserve in a well-closed container."
+    },
+    "features": [
+      "Dual-Action Cardiovascular Support",
+      "Vascular Tone: Both act as natural calcium channel blockers, relaxing blood vessels to support healthy blood pressure.",
+      "Heart Rhythm: Taurine regulates potassium currents and stabilizes heart cell membranes, complementing magnesium's role in maintaining steady cardiac rhythms.",
+      "Amino Acid Bioavailability: Bypasses inefficient mineral channels by using specialized intestinal amino acid pathways, ensuring maximum absorption and higher blood magnesium levels.",
+      "Blood-Brain Barrier Penetration: Taurine acts as a carrier molecule, easily guiding magnesium across the blood-brain barrier to calm excitotoxicity and protect neural pathways.",
+      "Superior GI Tolerance: No Laxative Effect: Highly stable and cleanly absorbed, leaving no unreacted magnesium in the gut to draw water. This completely avoids cramping, gas, or loose stools."
+    ],
+    "applications": [
+      "Dietary Supplements: Widely used in premium magnesium supplements formulated to support daily nutritional intake, overall wellness, and mineral supplementation.",
+      "Cardiovascular Health Products: Incorporated into formulations designed to support heart health, healthy blood pressure, and normal cardiovascular function.",
+      "Stress & Relaxation Formulations: Used in products focused on relaxation, stress management, and nervous system support.",
+      "Sleep Support Products: Included in sleep and nighttime wellness formulations to promote relaxation and healthy sleep quality.",
+      "Sports Nutrition: Applied in sports nutrition, recovery, and hydration products to support muscle function, electrolyte balance, and physical performance.",
+      "Clinical & Medical Nutrition: Used in specialized nutritional formulations and clinical nutrition products to help meet increased magnesium requirements.",
+      "Functional Foods & Beverages: Suitable for fortified beverages, nutritional powders, meal replacements, and functional food products enriched with magnesium.",
+      "Pharmaceutical Formulations: Incorporated into magnesium-based pharmaceutical products and specialized therapeutic formulations.",
+      "Nutraceutical Formulations: Ideal for tablets, capsules, powders, sachets, stick packs, and advanced nutritional delivery systems due to its excellent formulation compatibility and manufacturing performance.",
+      "Magnesium Fumarate",
+      "URL: /magnesium-fumarate-supplier",
+      "Meta Title: Trusted Magnesium Fumarate Manufacturer",
+      "Meta Description: Reliable Magnesium Fumarate ingredient supplier for advanced nutraceutical and pharmaceutical product development applications worldwide.call now"
+    ]
   },
   {
     "name": "Magnesium Fumarate",
@@ -911,7 +968,7 @@ export const products: Product[] = [
     "parentCategorySlug": "minerals",
     "subCategorySlug": "magnesium",
     "imagePath": "/aditya chemicals images/Magnesium/product card/Magnesium Bis Glycinate.png",
-    "description": "",
+    "description": "Magnesium fumarate is a highly bioavailable mineral salt used to prevent deficiency, support bone density, and aid in muscle and nerve function. It provides two essential components: elemental magnesium and fumaric acid, the latter being a cellular metabolite that assists the body's energy production cycles.",
     "details": {},
     "specifications": {
       "iupacName": "Magnesium;(E)-but-2-enedioate",
@@ -1307,7 +1364,7 @@ export const products: Product[] = [
     "parentCategorySlug": "minerals",
     "subCategorySlug": "calcium",
     "imagePath": "/aditya chemicals images/Calcium/product card/Calcium Orotate.png",
-    "description": "",
+    "description": "Calcium Orotate is a highly bioavailable calcium salt of orotic acid, valued for its ability to deliver calcium at a cellular level. Its superior absorption profile makes it a preferred choice for advanced bone health and metabolic support formulations. Aditya Chemicals supplies Calcium Orotate with excellent chemical stability, ideal for use in capsules, tablets, and fortified blends. Our material meets the quality standards required for high-performance health supplements.",
     "details": {
       "formula": "(C5H3O4)2. Ca",
       "weight": "350.3 g/mol",
@@ -1334,10 +1391,13 @@ export const products: Product[] = [
       "Clinical & Medical Nutrition: Suitable for specialized nutritional products intended for individuals with increased calcium requirements.",
       "Functional Foods & Beverages: Used in fortified beverages, nutritional powders, meal replacements, and functional food products requiring calcium enrichment.",
       "Advanced Nutraceutical Formulations: Ideal for tablets, capsules, powders, sachets, stick packs, chewable tablets, and combination mineral formulations due to its excellent formulation compatibility and manufacturing consistency.",
-      "CALCIUM LACTATE",
-      "URL : /calcium-lactate-manufacturer",
-      "Meta Title: Calcium Lactate Manufacturer & Supplier | Aditya Chemicals",
-      "Meta Description: Aditya Chemicals manufactures high-quality Calcium Lactate for pharmaceutical, food, nutraceutical, and dietary supplement applications with consistent quality and reliable global supply."
+      "Calcium Glycerophosphate",
+      "Calcium L-Pidolate",
+      "Zinc",
+      "Zinc Bis Glycinate",
+      "URL : /zinc-bis-glycinate-supplier",
+      "Meta Title: Zinc Bis Glycinate Manufacturer & Supplier",
+      "Meta Description: Aditya Chemicals manufactures premium-quality Zinc Bis Glycinate for pharmaceutical, nutraceutical, food, and dietary supplement applications with consistent quality and reliable global supply."
     ]
   },
   {
@@ -1481,7 +1541,7 @@ export const products: Product[] = [
     "parentCategorySlug": "minerals",
     "subCategorySlug": "zinc",
     "imagePath": "/aditya chemicals images/Zinc/product card/Zinc Bis Glycinate.png",
-    "description": "",
+    "description": "Zinc L-Carnosine Zinc Lactate Zinc L-Pidolate Zinc Orotate Potassium Magnesium Citrate Potassium Bis Glycinate Potassium Gluconate Potassium Citrate Potassium Magnesium Aspartate Creatine Malate Creatine Citrate Creatine Gluconate Creatine Orotate Calcium L-5 Methyltetrahydrofolate Riboflavin Sodium 5 - Phosphate Ferrous Asparto Glycinate Ferrous L-Pidolate Ferrous Bis Glycinate Ferrous Gluconate Ferrous Lactate Sodium Ferric EDTA Copper Bis Glycinate Copper Gluconate Manganese Bis Glycinate Manganese Gluconate Disodium Edetate Tetrasodium Edetate Boron Citrate Boron Glycinate",
     "details": {},
     "specifications": {},
     "features": [],
@@ -1587,6 +1647,8 @@ export const products: Product[] = [
     "imagePath": "/aditya chemicals images/Manganese/product card/Manganese Gluconate.png"
   }
 ];
+
+
 
 
 
