@@ -106,7 +106,7 @@ export default async function ContactPage({ searchParams }: PageProps) {
               USA Warehouse
             </h3>
             <p className="text-on-surface-variant text-sm font-semibold leading-relaxed">
-              6750 East Roger Circle, Boca Raton, FL 33487, USA
+              6550 E Roger Cir, Boca Raton, FL 33487, USA
             </p>
           </div>
         </div>

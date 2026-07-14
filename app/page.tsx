@@ -64,7 +64,7 @@ export default function Home() {
               "image": "https://www.adityachemicals.com/aditya_logo.png",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "6750 East Roger Circle",
+                "streetAddress": "6550 E Roger Cir",
                 "addressLocality": "Boca Raton",
                 "addressRegion": "FL",
                 "postalCode": "33487",

@@ -43,7 +43,7 @@ export const footerLinks = {
   },
   usaWarehouse: {
     title: "USA Warehouse",
-    address: "6750 East Roger Circle, Boca Raton, FL 33487, USA",
+    address: "6550 E Roger Cir, Boca Raton, FL 33487, USA",
   },
   contact: {
     title: "Contact Us",
