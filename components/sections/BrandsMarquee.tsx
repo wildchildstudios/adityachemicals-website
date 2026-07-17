@@ -33,7 +33,7 @@ export default function BrandsMarquee() {
       <div className="w-[95%] max-w-container-max mx-auto bg-primary py-6 md:py-12 px-3 md:px-8 text-white rounded-[1.5rem] md:rounded-[2rem] mb-8 md:mb-16 shadow-lg">
         <div className="grid grid-cols-3 gap-1 md:gap-8 text-center items-center">
           <div className="space-y-1 md:space-y-2">
-            <p className="text-xl sm:text-3xl md:text-5xl font-extrabold tracking-tight font-headline-md">75+</p>
+            <p className="text-xl sm:text-3xl md:text-5xl font-extrabold tracking-tight font-headline-md">100+</p>
             <p className="text-[9px] sm:text-[11px] md:text-sm font-semibold uppercase tracking-wider text-white/80 leading-snug">No. Of Products</p>
           </div>
           <div className="space-y-1 md:space-y-2 border-x border-white/15 px-1 md:px-4">

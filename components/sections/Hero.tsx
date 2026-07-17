@@ -61,7 +61,7 @@ export default function Hero() {
           {/* Floating Data Badges */}
           <div className="absolute -left-6 top-[12%] animate-float z-20">
             <div className="bg-white/90 backdrop-blur shadow-xl p-3 md:p-4 rounded-xl border border-surface-container-highest">
-              <p className="text-primary font-bold text-2xl md:text-3xl leading-none">41+</p>
+              <p className="text-primary font-bold text-2xl md:text-3xl leading-none">100+</p>
               <p className="text-on-surface-variant font-label-caps uppercase text-[9px] md:text-[10px] mt-1">Products</p>
             </div>
           </div>
