@@ -25,19 +25,10 @@ export const eventsData: Record<string, EventDetails> = {
     websiteUrl: "https://www.ift.org/ift-first-event/",
     purpose: "Showcase our portfolio of specialty minerals and vitamins, secure new global partnerships, and provide customized ingredient solutions for food and nutrition product manufacturers.",
     images: [
-      "/news/WhatsApp Image 2026-07-17 at 11.53.05 AM.jpeg",
       "/news/WhatsApp Image 2026-07-17 at 11.53.05 AM (1).jpeg",
       "/news/WhatsApp Image 2026-07-17 at 11.53.05 AM (2).jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.05 AM (3).jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.06 AM.jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.06 AM (1).jpeg",
       "/news/WhatsApp Image 2026-07-17 at 11.53.06 AM (2).jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.06 AM (3).jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.07 AM.jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.07 AM (1).jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.07 AM (2).jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.07 AM (3).jpeg",
-      "/news/WhatsApp Image 2026-07-17 at 11.53.08 AM.jpeg"
+      "/news/WhatsApp Image 2026-07-17 at 11.53.07 AM (1).jpeg"
     ],
     titleSEO: "Aditya Chemicals Showcases Premium Food & Nutraceutical Ingredients at IFT FIRST 2026 Chicago",
     descriptionSEO: "Learn about Aditya Chemicals' participation at IFT FIRST 2026 in Chicago. We exhibited our premium bioavailable chelated minerals, specialty vitamins, and custom ingredient solutions.",
