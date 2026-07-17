@@ -18,8 +18,8 @@ export interface EventDetails {
 export const eventsData: Record<string, EventDetails> = {
   "ift-first-2026": {
     slug: "ift-first-2026",
-    name: "IFT FIRST 2026",
-    date: "July 13–15, 2026",
+    name: "IFT FIRST Chicago 2026",
+    date: "July 12–15, 2026",
     venue: "McCormick Place",
     location: "Chicago, IL, USA",
     websiteUrl: "https://www.ift.org/ift-first-event/",
