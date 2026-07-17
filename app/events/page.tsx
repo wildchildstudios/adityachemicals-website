@@ -1,4 +1,6 @@
 import Link from "next/link";
+import EventCountdown from "@/components/EventCountdown";
+import EventLogo from "@/components/EventLogo";
 
 export const metadata = {
   title: "Global Exhibitions & Events | Aditya Chemicals CPhI IFT",
@@ -10,8 +12,15 @@ interface EventItem {
   name: string;
   venue: string;
   location: string;
-  booth?: string;
+  country: string;
+  flag: string;
+  logoText: string;
+  themeColor: string;
+  icon: string;
+  type: string;
   slug?: string;
+  startDateISO?: string;
+  websiteUrl?: string;
 }
 
 const upcomingEvents: EventItem[] = [
@@ -20,28 +29,56 @@ const upcomingEvents: EventItem[] = [
     name: "Fi India 2026",
     venue: "Bombay Exhibition Centre (BEC)",
     location: "Mumbai, India",
-    booth: "4F85",
+    country: "India",
+    flag: "🇮🇳",
+    logoText: "Fi",
+    themeColor: "bg-teal-50 text-teal-700 border-teal-200",
+    icon: "eco",
+    type: "fi",
+    startDateISO: "2026-08-26T09:00:00",
+    websiteUrl: "https://www.figlobal.com/india/en/home.html",
   },
   {
     date: "2-4 Sep 2026",
     name: "Vitafoods Asia 2026",
     venue: "Queen Sirikit National Convention Center (QSNCC)",
     location: "Bangkok, Thailand",
-    booth: "H6-G49",
+    country: "Thailand",
+    flag: "🇹🇭",
+    logoText: "Vitafoods",
+    themeColor: "bg-blue-50 text-blue-700 border-blue-200",
+    icon: "spa",
+    type: "vitafoods",
+    startDateISO: "2026-09-02T09:00:00",
+    websiteUrl: "https://www.vitafoodsasia.com/en/home.html",
   },
   {
     date: "27-30 Oct 2026",
     name: "SupplySide West 2026",
     venue: "Mandalay Bay",
     location: "Las Vegas, NV, USA",
-    booth: "7790",
+    country: "USA",
+    flag: "🇺🇸",
+    logoText: "SupplySide",
+    themeColor: "bg-purple-50 text-purple-700 border-purple-200",
+    icon: "nutrition",
+    type: "supplyside",
+    startDateISO: "2026-10-27T09:00:00",
+    websiteUrl: "https://west.supplysideshow.com/en/home.html",
   },
   {
     date: "23-25 Nov 2026",
     name: "CPHI & PMEC India 2026",
     venue: "India Expo Mart (IEML)",
     location: "Greater Noida, Delhi NCR, India",
-    booth: "-",
+    country: "India",
+    flag: "🇮🇳",
+    logoText: "CPHI",
+    themeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    icon: "medical_services",
+    type: "cphi",
+    startDateISO: "2026-11-23T09:00:00",
+    websiteUrl: "https://www.cphi.com/india/en/home.html",
   },
 ];
 
@@ -51,58 +88,109 @@ const pastEvents: EventItem[] = [
     name: "IFT FIRST Chicago 2026",
     venue: "McCormick Place",
     location: "Chicago, IL, USA",
-    booth: "1617",
     slug: "ift-first-2026",
+    country: "USA",
+    flag: "🇺🇸",
+    logoText: "IFT",
+    themeColor: "bg-orange-50 text-orange-700 border-orange-200",
+    icon: "restaurant",
+    type: "ift",
   },
   {
     date: "5-7 May 2026",
     name: "Vitafoods Europe 2026",
     venue: "Palexpo",
     location: "Geneva, Switzerland",
-    booth: "4H117",
+    country: "Switzerland",
+    flag: "🇨🇭",
+    logoText: "Vitafoods",
+    themeColor: "bg-blue-50 text-blue-700 border-blue-200",
+    icon: "spa",
+    type: "vitafoods",
   },
   {
     date: "29-30 Apr 2026",
     name: "ChemExpo India 2026",
     venue: "Bombay Exhibition Centre",
     location: "Mumbai, India",
-    booth: "4E22",
+    country: "India",
+    flag: "🇮🇳",
+    logoText: "ChemExpo",
+    themeColor: "bg-indigo-50 text-indigo-700 border-indigo-200",
+    icon: "science",
+    type: "chemexpo",
   },
   {
     date: "11-13 Feb 2026",
     name: "Vitafoods India 2026",
     venue: "Pavilion 1-3, Jio World Convention Center",
     location: "Mumbai, India",
+    country: "India",
+    flag: "🇮🇳",
+    logoText: "Vitafoods",
+    themeColor: "bg-blue-50 text-blue-700 border-blue-200",
+    icon: "spa",
+    type: "vitafoods",
   },
   {
     date: "25-27 Nov 2025",
     name: "CPHI PMEC India 2025",
     venue: "India Expo Mart (IEML)",
     location: "Greater Noida, Delhi NCR",
+    country: "India",
+    flag: "🇮🇳",
+    logoText: "CPHI",
+    themeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    icon: "medical_services",
+    type: "cphi",
   },
   {
     date: "29-30 Oct 2025",
     name: "SupplySide West 2025",
     venue: "Mandalay Bay",
     location: "Las Vegas, NV 89119, USA",
+    country: "USA",
+    flag: "🇺🇸",
+    logoText: "SupplySide",
+    themeColor: "bg-purple-50 text-purple-700 border-purple-200",
+    icon: "nutrition",
+    type: "supplyside",
   },
   {
     date: "17-19 Sep 2025",
     name: "Vitafoods Asia 2025",
     venue: "Queen Sirikit National Convention Centre (QSNCC)",
     location: "Bangkok, Thailand",
+    country: "Thailand",
+    flag: "🇹🇭",
+    logoText: "Vitafoods",
+    themeColor: "bg-blue-50 text-blue-700 border-blue-200",
+    icon: "spa",
+    type: "vitafoods",
   },
   {
     date: "3-5 Sep 2025",
     name: "Fi India 2025",
     venue: "IEML",
     location: "Greater Noida, Delhi NCR, India",
+    country: "India",
+    flag: "🇮🇳",
+    logoText: "Fi",
+    themeColor: "bg-teal-50 text-teal-700 border-teal-200",
+    icon: "eco",
+    type: "fi",
   },
   {
     date: "14-16 July 2025",
     name: "IFT 2025",
     venue: "McCormick Place",
     location: "Chicago, Illinois, USA",
+    country: "USA",
+    flag: "🇺🇸",
+    logoText: "IFT",
+    themeColor: "bg-orange-50 text-orange-700 border-orange-200",
+    icon: "restaurant",
+    type: "ift",
   },
 ];
 
@@ -120,132 +208,124 @@ export default function EventsPage() {
       </div>
 
       {/* Upcoming Events Section */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-deep-navy">Upcoming Events</h2>
-
-        {/* Desktop View Table */}
-        <div className="hidden md:block overflow-hidden rounded-2xl border border-surface-container-highest bg-white shadow-sm">
-          <table className="w-full border-collapse text-left text-sm text-on-surface">
-            <thead className="bg-surface-container-low border-b border-surface-container-highest font-bold text-deep-navy text-xs uppercase tracking-wider">
-              <tr>
-                <th className="px-6 py-4">Dates</th>
-                <th className="px-6 py-4">Event Name</th>
-                <th className="px-6 py-4">Venue</th>
-                <th className="px-6 py-4">Location</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-surface-container-highest font-medium">
-              {upcomingEvents.map((event, idx) => (
-                <tr key={idx} className="hover:bg-surface-container-low/50 transition-colors">
-                  <td className="px-6 py-4 text-primary font-bold">{event.date}</td>
-                  <td className="px-6 py-4 text-deep-navy font-bold text-base">{event.name}</td>
-                  <td className="px-6 py-4 text-on-surface-variant">{event.venue}</td>
-                  <td className="px-6 py-4 text-on-surface-variant/80">{event.location}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* Mobile View Cards */}
-        <div className="grid grid-cols-1 gap-4 md:hidden">
+      <div className="space-y-8">
+        <h2 className="text-2xl font-bold text-deep-navy border-b border-surface-container-highest pb-3">
+          Upcoming Exhibitions
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {upcomingEvents.map((event, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-xl border border-surface-container-highest shadow-sm space-y-3"
+              className="group bg-white rounded-2xl border border-surface-container-highest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden"
             >
-              <div className="flex justify-between items-center border-b border-surface-container-highest pb-2">
-                <span className="text-xs text-primary font-bold">{event.date}</span>
-                <span className="material-symbols-outlined text-primary text-sm select-none animate-pulse">
-                  schedule
-                </span>
+              <div className="p-6 space-y-5">
+                {/* Logo & Country Row */}
+                <div className="flex justify-between items-center">
+                  <EventLogo type={event.type} />
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-bold border border-surface-container-highest">
+                    <span>{event.flag}</span>
+                    <span>{event.country}</span>
+                  </span>
+                </div>
+                
+                {/* Event Name */}
+                <h3 className="font-bold text-deep-navy text-lg leading-snug group-hover:text-primary transition-colors">
+                  {event.name}
+                </h3>
+                
+                {/* Info Fields */}
+                <div className="space-y-2.5 text-sm text-on-surface-variant font-medium">
+                  <p className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-base select-none">calendar_today</span>
+                    {event.date}
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="material-symbols-outlined text-primary text-base select-none mt-0.5">location_on</span>
+                    <span>
+                      <strong className="block text-deep-navy font-semibold">{event.venue}</strong>
+                      <span className="text-xs text-on-surface-variant/80">{event.location}</span>
+                    </span>
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-deep-navy">{event.name}</h3>
-              <div className="space-y-1 text-xs text-on-surface-variant font-medium">
-                <p className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-xs select-none">location_on</span>
-                  {event.venue}
-                </p>
-                <p className="flex items-center gap-1.5 text-on-surface-variant/80">
-                  <span className="material-symbols-outlined text-xs select-none">public</span>
-                  {event.location}
-                </p>
+
+              {/* Countdown & Action Footer */}
+              <div className="border-t border-surface-container-highest px-6 py-4 bg-surface-container-low/40 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div className="space-y-1">
+                  <span className="text-[9px] text-on-surface-variant/80 uppercase font-bold tracking-wider block">Starts In</span>
+                  {event.startDateISO && <EventCountdown startDate={event.startDateISO} />}
+                </div>
+                {event.websiteUrl && (
+                  <a
+                    href={event.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-primary text-white font-button text-xs rounded-xl hover:bg-primary-container transition-all duration-200 text-center shadow-sm select-none font-bold"
+                  >
+                    Register
+                    <span className="material-symbols-outlined text-xs select-none">open_in_new</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Past Events - Responsive Table / Grid */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-deep-navy">Past Events</h2>
-
-        {/* Desktop View Table */}
-        <div className="hidden md:block overflow-hidden rounded-2xl border border-surface-container-highest bg-white shadow-sm">
-          <table className="w-full border-collapse text-left text-sm text-on-surface">
-            <thead className="bg-surface-container-low border-b border-surface-container-highest font-bold text-deep-navy text-xs uppercase tracking-wider">
-              <tr>
-                <th className="px-6 py-4">Dates</th>
-                <th className="px-6 py-4">Event Name</th>
-                <th className="px-6 py-4">Venue</th>
-                <th className="px-6 py-4">Location</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-surface-container-highest font-medium">
-              {pastEvents.map((event, idx) => (
-                <tr key={idx} className="hover:bg-surface-container-low/50 transition-colors">
-                  <td className="px-6 py-4 text-primary font-bold">{event.date}</td>
-                  <td className="px-6 py-4 text-deep-navy font-bold text-base">
-                    {event.slug ? (
-                      <Link href={`/events/${event.slug}`} className="text-primary hover:text-primary-container inline-flex items-center gap-1 group font-bold">
-                        {event.name}
-                        <span className="material-symbols-outlined text-sm select-none transition-transform group-hover:translate-x-0.5">arrow_forward</span>
-                      </Link>
-                    ) : (
-                      event.name
-                    )}
-                  </td>
-                  <td className="px-6 py-4 text-on-surface-variant">{event.venue}</td>
-                  <td className="px-6 py-4 text-on-surface-variant/80">{event.location}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* Mobile View Cards */}
-        <div className="grid grid-cols-1 gap-4 md:hidden">
+      {/* Past Events Section */}
+      <div className="space-y-8">
+        <h2 className="text-2xl font-bold text-deep-navy border-b border-surface-container-highest pb-3">
+          Exhibition Archive
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pastEvents.map((event, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-xl border border-surface-container-highest shadow-sm space-y-3"
+              className="group bg-white rounded-2xl border border-surface-container-highest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden"
             >
-              <div className="flex justify-between items-center border-b border-surface-container-highest pb-2">
-                <span className="text-xs text-primary font-bold">{event.date}</span>
-                <span className="material-symbols-outlined text-primary-fixed text-sm select-none">
-                  history
-                </span>
+              <div className="p-6 space-y-5">
+                {/* Logo & Country Row */}
+                <div className="flex justify-between items-center">
+                  <EventLogo type={event.type} />
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-bold border border-surface-container-highest">
+                    <span>{event.flag}</span>
+                    <span>{event.country}</span>
+                  </span>
+                </div>
+                
+                {/* Event Name */}
+                <h3 className="font-bold text-deep-navy text-lg leading-snug group-hover:text-primary transition-colors">
+                  {event.name}
+                </h3>
+                
+                {/* Info Fields */}
+                <div className="space-y-2.5 text-sm text-on-surface-variant font-medium">
+                  <p className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary-fixed text-base select-none">calendar_today</span>
+                    {event.date}
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="material-symbols-outlined text-primary-fixed text-base select-none mt-0.5">location_on</span>
+                    <span>
+                      <strong className="block text-deep-navy font-semibold">{event.venue}</strong>
+                      <span className="text-xs text-on-surface-variant/80">{event.location}</span>
+                    </span>
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-deep-navy">
-                {event.slug ? (
-                  <Link href={`/events/${event.slug}`} className="text-primary hover:text-primary-container inline-flex items-center gap-1 group font-bold">
-                    {event.name}
-                    <span className="material-symbols-outlined text-sm select-none transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+
+              {/* Action Button Footer for Past Events (if they have slugs) */}
+              {event.slug && (
+                <div className="border-t border-surface-container-highest px-6 py-4 bg-surface-container-low/40">
+                  <Link
+                    href={`/events/${event.slug}`}
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary text-white font-button text-xs rounded-xl hover:bg-primary-container transition-all duration-200 text-center shadow-sm select-none font-bold"
+                  >
+                    View Highlights & Gallery
+                    <span className="material-symbols-outlined text-sm select-none">arrow_forward</span>
                   </Link>
-                ) : (
-                  event.name
-                )}
-              </h3>
-              <div className="space-y-1 text-xs text-on-surface-variant font-medium">
-                <p className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-xs select-none">location_on</span>
-                  {event.venue}
-                </p>
-                <p className="flex items-center gap-1.5 text-on-surface-variant/80">
-                  <span className="material-symbols-outlined text-xs select-none">public</span>
-                  {event.location}
-                </p>
-              </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
