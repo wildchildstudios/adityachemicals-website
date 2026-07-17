@@ -25,6 +25,7 @@ export const footerLinks = {
       { name: "About Us", href: "/about" },
       { name: "Products", href: "/products" },
       { name: "Certificates", href: "/certificates" },
+      { name: "News & Events", href: "/events" },
       { name: "Contact Us", href: "/contact" },
     ],
   },

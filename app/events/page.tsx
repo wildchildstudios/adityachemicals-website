@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Global Exhibitions & Events | Aditya Chemicals CPhI IFT",
   description: "Stay updated on the international pharma and food ingredient trade shows (CPhI, IFT, Fi Europe) where Aditya Chemicals showcases compliance and manufacturing innovations.",
@@ -8,9 +10,17 @@ interface EventItem {
   name: string;
   venue: string;
   location: string;
+  slug?: string;
 }
 
 const pastEvents: EventItem[] = [
+  {
+    date: "13-15 July 2026",
+    name: "IFT FIRST 2026",
+    venue: "McCormick Place",
+    location: "Chicago, IL, USA",
+    slug: "ift-first-2026",
+  },
   {
     date: "14-16 July 2025",
     name: "IFT 2025",
@@ -95,7 +105,16 @@ export default function EventsPage() {
               {pastEvents.map((event, idx) => (
                 <tr key={idx} className="hover:bg-surface-container-low/50 transition-colors">
                   <td className="px-6 py-4 text-primary font-bold">{event.date}</td>
-                  <td className="px-6 py-4 text-deep-navy font-bold text-base">{event.name}</td>
+                  <td className="px-6 py-4 text-deep-navy font-bold text-base">
+                    {event.slug ? (
+                      <Link href={`/events/${event.slug}`} className="text-primary hover:text-primary-container inline-flex items-center gap-1 group font-bold">
+                        {event.name}
+                        <span className="material-symbols-outlined text-sm select-none transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                      </Link>
+                    ) : (
+                      event.name
+                    )}
+                  </td>
                   <td className="px-6 py-4 text-on-surface-variant">{event.venue}</td>
                   <td className="px-6 py-4 text-on-surface-variant/80">{event.location}</td>
                 </tr>
@@ -117,7 +136,16 @@ export default function EventsPage() {
                   history
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-deep-navy">{event.name}</h3>
+              <h3 className="text-lg font-bold text-deep-navy">
+                {event.slug ? (
+                  <Link href={`/events/${event.slug}`} className="text-primary hover:text-primary-container inline-flex items-center gap-1 group font-bold">
+                    {event.name}
+                    <span className="material-symbols-outlined text-sm select-none transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                  </Link>
+                ) : (
+                  event.name
+                )}
+              </h3>
               <div className="space-y-1 text-xs text-on-surface-variant font-medium">
                 <p className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-xs select-none">location_on</span>
