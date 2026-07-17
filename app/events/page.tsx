@@ -21,6 +21,7 @@ interface EventItem {
   slug?: string;
   startDateISO?: string;
   websiteUrl?: string;
+  booth?: string;
 }
 
 const upcomingEvents: EventItem[] = [
@@ -37,6 +38,7 @@ const upcomingEvents: EventItem[] = [
     type: "fi",
     startDateISO: "2026-08-26T09:00:00",
     websiteUrl: "https://www.figlobal.com/india/en/home.html",
+    booth: "4F85",
   },
   {
     date: "2-4 Sep 2026",
@@ -51,6 +53,7 @@ const upcomingEvents: EventItem[] = [
     type: "vitafoods",
     startDateISO: "2026-09-02T09:00:00",
     websiteUrl: "https://www.vitafoodsasia.com/en/home.html",
+    booth: "H6-G49",
   },
   {
     date: "27-30 Oct 2026",
@@ -65,6 +68,7 @@ const upcomingEvents: EventItem[] = [
     type: "supplyside",
     startDateISO: "2026-10-27T09:00:00",
     websiteUrl: "https://west.supplysideshow.com/en/home.html",
+    booth: "7790",
   },
   {
     date: "23-25 Nov 2026",
@@ -220,12 +224,19 @@ export default function EventsPage() {
             >
               <div className="p-6 space-y-5">
                 {/* Logo & Country Row */}
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center flex-wrap gap-2">
                   <EventLogo type={event.type} />
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-bold border border-surface-container-highest">
-                    <span>{event.flag}</span>
-                    <span>{event.country}</span>
-                  </span>
+                  <div className="flex items-center gap-1.5">
+                    {event.booth && (
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold border border-primary/20 font-mono">
+                        Booth: {event.booth}
+                      </span>
+                    )}
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-bold border border-surface-container-highest">
+                      <span>{event.flag}</span>
+                      <span>{event.country}</span>
+                    </span>
+                  </div>
                 </div>
                 
                 {/* Event Name */}
