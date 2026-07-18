@@ -46,6 +46,7 @@ function CalciumGlycerophosphateStructure() {
   );
 }
 
+
 // Fallback Molecular Art SVG for other products
 function GenericMolecularStructure({ formula }: { formula?: string }) {
   return (
@@ -190,46 +191,66 @@ export default async function ProductDetailPage({ params }: PageProps) {
               {product.description || `Aditya Chemicals offers high-purity ${product.name}, manufactured to consistent quality standards supporting pharmaceutical, nutraceutical, dietary, and commercial applications worldwide. Our state-of-the-art facilities ensure dependable mineral delivery, purity assurance, and strict batch-to-batch compliance.`}
             </p>
 
-            {/* USP Icon Cards Row (Clean SVGs instead of font characters) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-2">
-              <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
-                <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="M8 11.5c.5-1 1.5-1.5 2.5-1.5s2 .5 2.5 1.5M11 15h2" />
-                </svg>
-                <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">Bone & Dental Support</span>
+            {/* USP Icon Cards Row (Clean Image badges matching bottom chemical area icons) */}
+            {product.slug === "calcium-glycerophosphate" && (
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-2">
+                <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
+                  <div className="relative w-10 h-10 md:w-12 md:h-12 mix-blend-multiply">
+                    <Image
+                      src="/aditya chemicals images/Calcium/logos/logo-bone-dental.png"
+                      alt="Bone & Dental Support"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">Bone & Dental Support</span>
+                </div>
+                <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
+                  <div className="relative w-10 h-10 md:w-12 md:h-12 mix-blend-multiply">
+                    <Image
+                      src="/aditya chemicals images/Calcium/logos/logo-bioavailability.png"
+                      alt="High Bioavailability"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">High Bioavailability</span>
+                </div>
+                <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
+                  <div className="relative w-10 h-10 md:w-12 md:h-12 mix-blend-multiply">
+                    <Image
+                      src="/aditya chemicals images/Calcium/logos/logo-stomach.png"
+                      alt="Gentle on Stomach"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">Gentle on Stomach</span>
+                </div>
+                <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
+                  <div className="relative w-10 h-10 md:w-12 md:h-12 mix-blend-multiply">
+                    <Image
+                      src="/aditya chemicals images/Calcium/logos/logo-clean-label.png"
+                      alt="Clean Label Friendly"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">Clean Label Friendly</span>
+                </div>
+                <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
+                  <div className="relative w-10 h-10 md:w-12 md:h-12 mix-blend-multiply">
+                    <Image
+                      src="/aditya chemicals images/Calcium/logos/logo-easy-formulate.png"
+                      alt="Easy to Formulate"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">Easy to Formulate</span>
+                </div>
               </div>
-              <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
-                <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-                <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">High Bioavailability</span>
-              </div>
-              <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
-                <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-                  <line x1="9" y1="9" x2="9.01" y2="9" />
-                  <line x1="15" y1="9" x2="15.01" y2="9" />
-                </svg>
-                <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">Gentle on Stomach</span>
-              </div>
-              <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
-                <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a11 11 0 0 1-9 10Z" />
-                </svg>
-                <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">Clean Label Friendly</span>
-              </div>
-              <div className="bg-surface-container-low p-3.5 rounded-xl border border-surface-container-highest text-center flex flex-col items-center justify-center space-y-2">
-                <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                  <line x1="12" y1="22.08" x2="12" y2="12" />
-                </svg>
-                <span className="text-[10px] md:text-xs font-bold text-deep-navy leading-snug">Easy to Formulate</span>
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Right Column: Product Image/Mockup */}
