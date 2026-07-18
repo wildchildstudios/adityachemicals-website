@@ -1407,7 +1407,38 @@ export const products: Product[] = [
     "categoryTag": "Calcium (Chelated Minerals)",
     "parentCategorySlug": "minerals",
     "subCategorySlug": "calcium",
-    "imagePath": "/aditya chemicals images/Calcium/product card/Calcium Bis Glycinate.png"
+    "imagePath": "/aditya chemicals images/Calcium/product card/Calcium Glycerophosphate.png",
+    "description": "Calcium Glycerophosphate is an organic calcium salt of glycerophosphoric acid that delivers both calcium and phosphorus in a single, well-tolerated compound. Valued for its high bioavailability and gentle gastrointestinal profile compared to less soluble calcium salts, it is a preferred calcium source for formulators seeking dependable mineral delivery without compromising on tolerability. Aditya Chemical's Calcium Glycerophosphate is manufactured to consistent quality standards, supporting nutraceutical, dietary, and pharmaceutical applications worldwide.",
+    "details": {
+      "formula": "C₃H₇CaO₆P",
+      "weight": "210.14 g/mol",
+      "shelfLife": "3 Years",
+      "grade": "BP/EP/USP/FCC"
+    },
+    "specifications": {
+      "physicalForm": "White or almost white powder, hygroscopic",
+      "assay": "18.6% to 19.4% Ca, calculated on the dried substance (complexometric/EDTA titration)",
+      "solubility": "Sparingly soluble in water; practically insoluble in ethanol (96%); solubility improves at lower temperature and in the presence of citric acid",
+      "storage": "Store in a well-closed, airtight container, protected from moisture"
+    },
+    "features": [
+      "Dual Mineral Delivery: Supplies both elemental calcium and phosphorus in one molecule, reducing the need for a separate phosphorus source in multi-mineral formulations.",
+      "High Bioavailability: Recognised for improved absorption relative to less soluble calcium salts, supporting efficient calcium uptake.",
+      "Gentle Gastrointestinal Tolerance: Sparingly soluble, buffered release profile helps minimise gastric irritation, supporting comfortable daily use.",
+      "Bone & Skeletal Mineralisation Support: Contributes both calcium and phosphate, two minerals directly involved in bone matrix formation and skeletal strength.",
+      "Dental & Oral Care Compatibility: Recognised for a role in remineralisation-focused oral care formulations, supporting enamel health alongside fluoride or magnesium actives.",
+      "Stable Powder Handling: Consistent particle characteristics support reliable blending, though the hygroscopic nature calls for airtight, moisture-protected storage during processing."
+    ],
+    "applications": [
+      "Dietary Supplements: Used in supplements for bone health, general wellness, and daily nutritional support.",
+      "Sports Nutrition: Incorporated in recovery and performance formulations to support electrolyte balance and bone health.",
+      "Pharmaceutical Formulations: Suitable for products aimed at preventing or treating calcium deficiency with good tolerability.",
+      "Functional Foods & Beverages: Ideal for fortified beverages, nutritional powders, and functional foods enriched with calcium.",
+      "Clinical & Medical Nutrition: Included in specialised formulations for individuals with increased calcium and phosphorus requirements.",
+      "Oral & Dental Care Formulations: Used in toothpaste and oral care products targeting enamel remineralisation and dental health.",
+      "Bone & Skeletal Health Products: Supports skeletal mineralisation and maintenance of healthy bone density.",
+      "Nutraceutical Formulations: Ideal for tablets, capsules, powders, and sachets due to its stable handling characteristics and formulation compatibility."
+    ]
   },
   {
     "name": "Zinc Bis Glycinate",

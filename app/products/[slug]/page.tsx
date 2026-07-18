@@ -132,12 +132,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
         <div data-bg-color="#ffffff" className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-surface-container-highest grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column: Product Image */}
-          <div className="lg:col-span-5 relative w-full h-[320px] md:h-[420px] bg-surface-container-low rounded-2xl overflow-hidden border border-glass-stroke shadow-md">
+          <div className="lg:col-span-5 relative w-full h-[320px] md:h-[420px] bg-white rounded-2xl overflow-hidden border border-glass-stroke shadow-md">
             <Image
               src={product.imagePath}
               alt={product.name}
               fill
-              className="object-cover"
+              className="object-contain p-4"
               sizes="(max-width: 1024px) 100vw, 40vw"
               priority
             />
