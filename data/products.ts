@@ -1407,7 +1407,7 @@ export const products: Product[] = [
     "categoryTag": "Calcium (Chelated Minerals)",
     "parentCategorySlug": "minerals",
     "subCategorySlug": "calcium",
-    "imagePath": "/aditya chemicals images/Calcium/product card/Calcium Glycerophosphate.png",
+    "imagePath": "/aditya chemicals images/Calcium/product card/calcium-glycerophosphate-structure.jpg",
     "description": "Calcium Glycerophosphate is an organic calcium salt of glycerophosphoric acid that delivers both calcium and phosphorus in a single, well-tolerated compound. Valued for its high bioavailability and gentle gastrointestinal profile compared to less soluble calcium salts, it is a preferred calcium source for formulators seeking dependable mineral delivery without compromising on tolerability. Aditya Chemical's Calcium Glycerophosphate is manufactured to consistent quality standards, supporting nutraceutical, dietary, and pharmaceutical applications worldwide.",
     "details": {
       "formula": "C₃H₇CaO₆P",
