@@ -56,5 +56,48 @@ export const eventsData: Record<string, EventDetails> = {
       "Discussed long-term global supply partnerships with leading food and dietary supplement brands.",
       "Exhibited full compliance capabilities across FDA, USP, FCC, and European Pharmacopoeia (EP) regulations."
     ]
+  },
+  "vitafoods-europe-2026": {
+    slug: "vitafoods-europe-2026",
+    name: "Vitafoods Europe 2026",
+    date: "May 5–7, 2026",
+    venue: "Fira Barcelona Gran Via",
+    location: "barcelona, spain",
+    websiteUrl: "https://www.vitafoodseurope.com/en/home.html",
+    purpose: "Exhibit our premium bioavailable chelated minerals, specialty vitamins, and excipient solutions, connect with European dietary supplement formulators, and expand our global supply partnerships.",
+    images: [
+      "/news/vitafoods-europe-1.jpg",
+      "/news/vitafoods-europe-2.jpg",
+      "/news/vitafoods-europe-3.jpg",
+      "/news/vitafoods-europe-4.jpg",
+      "/news/vitafoods-europe-5.jpg",
+      "/news/vitafoods-europe-6.jpg"
+    ],
+    titleSEO: "Aditya Chemicals Exhibits Premium Minerals & Nutraceuticals at Vitafoods Europe 2026",
+    descriptionSEO: "Read about Aditya Chemicals at Vitafoods Europe 2026 in Barcelona, Spain. We exhibited our high-purity chelated minerals, vitamins, and custom premix solutions for European markets.",
+    longDescription: [
+      "Aditya Chemicals, a leading FDA-registered and GMP-certified manufacturer of APIs and chelated minerals, participated in Vitafoods Europe 2026. The event was held at the Fira Barcelona Gran Via in barcelona, spain, serving as the premier annual gathering for the global nutraceutical, functional food, and dietary supplement industries.",
+      "At our exhibition stand, our technical and business development teams presented our extensive range of mineral chelates and excipients designed to meet the rigorous quality standards of the European market. We discussed compliance with EP and USP guidelines and established new collaborative channels with global brand owners and formulators looking for reliable, high-purity bulk ingredient suppliers."
+    ],
+    highlights: [
+      {
+        title: "High-Absorption Mineral Chelates",
+        description: "Featured our organic mineral bisglycinates, including Magnesium Bisglycinate, Calcium Bisglycinate, and Zinc Bisglycinate. These ingredients offer superior bioavailability and gentle gastrointestinal tolerance, making them ideal for premium dietary supplements."
+      },
+      {
+        title: "European Regulatory Compliance",
+        description: "Highlighted our strict manufacturing adherence to European Pharmacopoeia (EP) standards, ISO certifications, and GMP guidelines, giving European formulators complete regulatory confidence."
+      },
+      {
+        title: "Custom Formulation & Granulation",
+        description: "Discussed our customized granulation services for direct compression tableting, customized particle size configurations, and specialized premixes designed to solve complex manufacturing issues."
+      }
+    ],
+    keyTakeaways: [
+      "Exhibited our advanced portfolio of high-purity minerals and vitamins to the European health and nutrition sector.",
+      "Addressed compliance standards for European Pharmacopoeia (EP) and USP guidelines.",
+      "Fostered key partnerships with global supplement brands and contract manufacturers.",
+      "Shared logistics capabilities for rapid distribution across Europe and the UK."
+    ]
   }
 };

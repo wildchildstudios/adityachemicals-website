@@ -103,14 +103,15 @@ const pastEvents: EventItem[] = [
   {
     date: "5-7 May 2026",
     name: "Vitafoods Europe 2026",
-    venue: "Palexpo",
-    location: "Geneva, Switzerland",
-    country: "Switzerland",
-    flag: "🇨🇭",
+    venue: "Fira Barcelona Gran Via",
+    location: "barcelona, spain",
+    country: "barcelona, spain",
+    flag: "🇪🇸",
     logoText: "Vitafoods",
     themeColor: "bg-blue-50 text-blue-700 border-blue-200",
     icon: "spa",
     type: "vitafoods",
+    slug: "vitafoods-europe-2026",
   },
   {
     date: "29-30 Apr 2026",
@@ -238,12 +239,12 @@ export default function EventsPage() {
                     </span>
                   </div>
                 </div>
-                
+
                 {/* Event Name */}
                 <h3 className="font-bold text-deep-navy text-lg leading-snug group-hover:text-primary transition-colors">
                   {event.name}
                 </h3>
-                
+
                 {/* Info Fields */}
                 <div className="space-y-2.5 text-sm text-on-surface-variant font-medium">
                   <p className="flex items-center gap-2">
@@ -303,12 +304,12 @@ export default function EventsPage() {
                     <span>{event.country}</span>
                   </span>
                 </div>
-                
+
                 {/* Event Name */}
                 <h3 className="font-bold text-deep-navy text-lg leading-snug group-hover:text-primary transition-colors">
                   {event.name}
                 </h3>
-                
+
                 {/* Info Fields */}
                 <div className="space-y-2.5 text-sm text-on-surface-variant font-medium">
                   <p className="flex items-center gap-2">
