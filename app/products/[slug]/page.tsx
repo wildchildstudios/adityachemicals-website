@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ScrollBackground from "@/components/ScrollBackground";
+import Interactive3DMolecule from "@/components/Interactive3DMolecule";
 import { getCategoryBySlug, getProductBySlug, products } from "@/data/products";
 
 interface PageProps {
@@ -467,11 +468,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
               </div>
             )}
             {product.slug === "dl-methionine-2" && (
-              <div className="lg:col-span-6 bg-white rounded-[2rem] p-6 md:p-8 border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between space-y-4">
+              <div className="lg:col-span-6 bg-white rounded-[2rem] p-6 md:p-8 border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between space-y-4 relative">
                 <h3 className="text-lg font-bold text-deep-navy border-b border-surface-container-highest pb-2 select-none uppercase tracking-wider">
                   Chemical Structure
                 </h3>
-                <DLMethionineStructure />
+                <Interactive3DMolecule />
               </div>
             )}
 
