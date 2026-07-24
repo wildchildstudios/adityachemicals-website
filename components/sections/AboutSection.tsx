@@ -51,6 +51,17 @@ export default function AboutSection() {
                 </p>
               </div>
             </div>
+            <div className="flex gap-4 p-4 md:p-6 bg-white rounded-xl shadow-sm border border-surface-container-highest">
+              <span className="material-symbols-outlined text-primary text-3xl select-none">
+                public
+              </span>
+              <div>
+                <h4 className="font-bold text-on-surface">Global Supply & Warehousing</h4>
+                <p className="text-on-surface-variant text-sm mt-1">
+                  Dedicated US warehouse in Boca Raton, Florida, and REACH-compliant European distribution networks.
+                </p>
+              </div>
+            </div>
           </div>
           <Link
             href="/about"

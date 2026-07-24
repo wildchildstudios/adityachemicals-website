@@ -14,9 +14,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/contact',
     '/privacy-policy',
     '/terms-of-use',
+    // Regional hub pages (Step 6)
+    '/us',
+    '/uk',
+    '/eu',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: route === '' ? 1.0 : 0.8,
   }));
@@ -26,16 +29,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}/product-category/${cat.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: 0.7,
+    priority: 0.8,
   }));
 
-  // Dynamic product routes
+  // Global Dynamic product routes (all products)
   const productRoutes = products.map((prod) => ({
     url: `${baseUrl}/products/${prod.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: 0.6,
+    priority: 0.85,
   }));
 
-  return [...staticRoutes, ...categoryRoutes, ...productRoutes];
+  // Regional Dynamic product routes (only products with regional content, Step 6)
+  const regionalProducts = products.filter((prod) => !!prod.regionalContent);
+  const regionalProductRoutes: any[] = [];
+
+  regionalProducts.forEach((prod) => {
+    regionalProductRoutes.push({
+      url: `${baseUrl}/us/products/${prod.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    });
+    regionalProductRoutes.push({
+      url: `${baseUrl}/uk/products/${prod.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    });
+    regionalProductRoutes.push({
+      url: `${baseUrl}/eu/products/${prod.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    });
+  });
+
+  return [
+    ...staticRoutes,
+    ...categoryRoutes,
+    ...productRoutes,
+    ...regionalProductRoutes,
+  ];
 }

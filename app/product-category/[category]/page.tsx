@@ -30,6 +30,9 @@ export async function generateMetadata({ params }: PageProps) {
     title: title,
     description: `${category.description} High-purity, GMP-certified chemical ingredients supplied in bulk to pharmaceutical, nutraceutical, and food industries across the USA, UK, Europe, and globally.`,
     keywords: `${category.name}, bulk ${category.name}, ${category.name} supplier, ${category.name} manufacturer, GMP certified ${category.name}, pharmaceutical grade ${category.name}`,
+    alternates: {
+      canonical: `/product-category/${category.slug}`,
+    }
   };
 }
 

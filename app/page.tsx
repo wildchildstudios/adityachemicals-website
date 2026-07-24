@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import AboutSection from "@/components/sections/AboutSection";
 import ProductsMarquee from "@/components/sections/ProductsMarquee";
@@ -8,10 +9,20 @@ import CTASection from "@/components/sections/CTASection";
 import ScrollBackground from "@/components/ScrollBackground";
 import ScrollReveal from "@/components/ScrollReveal";
 
-export const metadata = {
-  title: "Aditya Chemicals | GMP Certified API & Chelated Minerals Manufacturer",
-  description: "Aditya Chemicals is a leading global manufacturer of active pharmaceutical ingredients (APIs), bulk bioavailable Chelated Minerals, amino acids, and excipients. GMP-certified & FDA-registered plant exporting to USA, Europe, UK, and globally.",
-  keywords: "chemical manufacturer, API manufacturing company, bulk chelated minerals supplier, amino acids exporter, GMP certified factory, FDA registered chemical plant, USA chemical supplier, Europe chemical exporter, UK compliant chemical manufacturing",
+export const metadata: Metadata = {
+  title: "Aditya Chemicals | Global API & Chelated Minerals Manufacturer & Exporter",
+  description: "Aditya Chemicals is a leading GMP-certified API & bulk Chelated Minerals manufacturer. Supplying high-purity chemicals, excipients, and amino acids to the USA, UK, Europe, and globally. Operating under FDA registration & REACH compliance with localized warehousing in Boca Raton, Florida.",
+  keywords: "chemical manufacturer, API manufacturing company, bulk chelated minerals supplier, amino acids exporter, GMP certified factory, FDA registered chemical plant, USA chemical supplier, Europe chemical exporter, UK compliant chemical manufacturing, chemical factory in USA, chemical factory in UK, chemical factory in Europe, REACH registered chemical company, bulk excipients manufacturer USA, pharma chemicals UK, chelated minerals factory Europe, zinc ascorbate manufacturer USA, manganese gluconate supplier UK, glycine factory Europe, essential amino acids bulk exporter, chemical factory, chemical industry, USA chemical factory, UK chemical factory, Europe chemical factory, USA chemical industry, UK chemical industry, Europe chemical industry",
+  alternates: {
+    canonical: "https://www.adityachemicals.com",
+    languages: {
+      "en-US": "https://www.adityachemicals.com",
+      "en-GB": "https://www.adityachemicals.com",
+      "en-DE": "https://www.adityachemicals.com",
+      "en-NL": "https://www.adityachemicals.com",
+      "en-FR": "https://www.adityachemicals.com"
+    }
+  }
 };
 
 export default function Home() {

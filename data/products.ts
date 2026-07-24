@@ -22,6 +22,11 @@ export interface Product {
   };
   features?: string[];
   applications?: string[];
+  regionalContent?: {
+    us?: { intro: string; complianceNote: string; shippingNote: string };
+    uk?: { intro: string; complianceNote: string; shippingNote: string };
+    eu?: { intro: string; complianceNote: string; shippingNote: string };
+  };
 }
 
 export interface Category {
@@ -165,7 +170,24 @@ export const products: Product[] = [
       "Sports Nutrition: Included in amino acid and protein-blend formulations designed for active lifestyle and performance nutrition products.",
       "Cosmetic & Personal Care Formulations: Used in select topical and hair-care formulations for its role in supporting keratin synthesis and as a mild antioxidant ingredient.",
       "Functional Foods & Fortified Beverages: Suitable for use in fortified food products and nutritional beverages requiring amino acid enrichment."
-    ]
+    ],
+    "regionalContent": {
+      "us": {
+        "intro": "Aditya Chemicals is a leading bulk supplier of high-purity DL-Methionine to the USA market, serving animal nutrition, supplement, and pharmaceutical formulation sectors.",
+        "complianceNote": "Our DL-Methionine meets USP/FCC standards. We support US buyers with full FDA registration compliance and complete regulatory dossiers (MSDS, COA).",
+        "shippingNote": "Shipped from our FDA-registered Gujarat facility or distributed locally from our Boca Raton, Florida warehouse to ensure rapid US shipping."
+      },
+      "uk": {
+        "intro": "For the UK market, Aditya Chemicals supplies bulk DL-Methionine tailored to animal feed and pharmaceutical applications.",
+        "complianceNote": "Complies with BP pharmacopeial standards. We provide complete UK-REACH regulatory support and batch trace certificates.",
+        "shippingNote": "Shipped directly to major UK hubs, with flexible freight options available for British distributors."
+      },
+      "eu": {
+        "intro": "Aditya Chemicals provides European buyers with premium bulk DL-Methionine for feed enrichment and pharmaceutical use.",
+        "complianceNote": "Fully REACH registered and compliant with European Union regulations. Meets EP (European Pharmacopoeia) specifications.",
+        "shippingNote": "Supplied through our European logistics network with complete customs and import clearance."
+      }
+    }
   },
   {
     "name": "L-Carnitine Fumarate",
@@ -210,7 +232,24 @@ export const products: Product[] = [
       "URL: https://www.adityachemicals.in/l-carnitine-fumarate-manufacturer/",
       "Meta Title: L-Carnitine Fumarate Manufacturer & Bulk Supplier",
       "Meta Description: Leading L-Carnitine Fumarate manufacturer offers high-purity ingredients for sports nutrition, wellness, energy & dietary supplement formulations worldwide."
-    ]
+    ],
+    "regionalContent": {
+      "us": {
+        "intro": "Aditya Chemicals supplies high-purity L-Carnitine Fumarate to the US dietary supplement and sports nutrition industries.",
+        "complianceNote": "Manufactured under strict cGMP guidelines, complying with FDA regulations and USP standards.",
+        "shippingNote": "Available for rapid shipping from our Boca Raton, Florida warehouse or direct bulk export from India."
+      },
+      "uk": {
+        "intro": "We provide premium L-Carnitine Fumarate to UK brands for active lifestyle and health formulations.",
+        "complianceNote": "BP compliant and supported by complete UK-REACH documentation.",
+        "shippingNote": "Direct delivery to UK locations with structured shipping schedules and comprehensive customs support."
+      },
+      "eu": {
+        "intro": "Aditya Chemicals is a leading exporter of L-Carnitine Fumarate to the European health and wellness sector.",
+        "complianceNote": "REACH registered and EP compliant, meeting strict EU purity and quality regulations.",
+        "shippingNote": "Shipped directly to European distributors, complete with import declaration support."
+      }
+    }
   },
   {
     "name": "Glycine",
@@ -254,7 +293,24 @@ export const products: Product[] = [
       "URL: https://www.adityachemicals.in/dl-methionine-manufacturer",
       "Meta Title: DL-Methionine Manufacturer in India | Global Supplier",
       "Meta Description: Trusted DL-Methionine manufacturer providing high-purity amino acid ingredients for pharmaceutical, nutraceutical, food, and animal nutrition products."
-    ]
+    ],
+    "regionalContent": {
+      "us": {
+        "intro": "Aditya Chemicals manufactures premium-grade Glycine, serving as a trusted supplier for US pharma and food formulations.",
+        "complianceNote": "Produced in our FDA-registered facility, fully compliant with USP/FCC standards.",
+        "shippingNote": "Distributed locally from our Florida warehouse, offering flexible quantities and prompt transit."
+      },
+      "uk": {
+        "intro": "We supply high-purity bulk Glycine to the UK for clinical nutrition, pharmaceutical, and cosmetic formulations.",
+        "complianceNote": "Meets BP standards and aligns with UK-REACH requirements for chemical safety.",
+        "shippingNote": "Shipped from our India manufacturing hub with direct routes to UK shipping terminals."
+      },
+      "eu": {
+        "intro": "Aditya Chemicals delivers bulk Glycine to European pharmaceutical and food processing companies.",
+        "complianceNote": "REACH registered, ensuring compliance with European chemical import regulations and EP standards.",
+        "shippingNote": "Managed by our EU logistics partners, offering hassle-free customs clearance and direct delivery."
+      }
+    }
   },
   {
     "name": "L-Carnitine L-Tartrate",
@@ -299,7 +355,24 @@ export const products: Product[] = [
       "URL: https://www.adityachemicals.in//l-carnitine-orotate-manufacturer/",
       "Meta Title: L Carnitine Orotate Manufacturer | Nutraceutical Grade",
       "Meta Description: L Carnitine Orotate supports cellular energy and mitochondrial function. Ideal ingredient for advanced nutraceutical and performance formulas."
-    ]
+    ],
+    "regionalContent": {
+      "us": {
+        "intro": "Aditya Chemicals provides bulk L-Carnitine L-Tartrate to the US market for sports nutrition and fat recovery formulations.",
+        "complianceNote": "Meets USP/FCC specifications, manufactured in our FDA-approved facility.",
+        "shippingNote": "Fast delivery within the US via our Boca Raton, Florida warehouse."
+      },
+      "uk": {
+        "intro": "We supply premium L-Carnitine L-Tartrate to the UK for sports supplements and clinical nutrition.",
+        "complianceNote": "Fully compliant with BP standards and UK-REACH regulations.",
+        "shippingNote": "Regular air and sea freight routes to the UK, ensuring reliable stock availability."
+      },
+      "eu": {
+        "intro": "Aditya Chemicals exports high-grade L-Carnitine L-Tartrate to European food and supplement manufacturers.",
+        "complianceNote": "Active REACH registration, conforming to EP quality standards.",
+        "shippingNote": "Distributed to EU locations with complete customs handling and logistics tracking."
+      }
+    }
   },
   {
     "name": "L-Arginine L-Aspartate",
@@ -573,7 +646,24 @@ export const products: Product[] = [
       "URL: /magnesium-citrate-supplier",
       "Meta Title:Magnesium Citrate for Relaxation & Digestive Support",
       "Meta Description: Magnesium citrate promotes relaxation, supports digestion, & enhances muscle wellness with optimal absorption. Perfect for nutraceutical applications."
-    ]
+    ],
+    "regionalContent": {
+      "us": {
+        "intro": "Aditya Chemicals is a leading manufacturer of Magnesium Bis Glycinate, offering highly bioavailable chelated magnesium to the USA.",
+        "complianceNote": "Fully compliant with FDA dietary supplement regulations and USP specifications.",
+        "shippingNote": "Stocked at our US warehouse in Florida, enabling rapid, cost-effective shipping across North America."
+      },
+      "uk": {
+        "intro": "We supply premium Magnesium Bis Glycinate to UK nutraceutical brands for sleep and muscle support formulas.",
+        "complianceNote": "Conforms to BP pharmacopeia standards with full UK-REACH regulatory backing.",
+        "shippingNote": "Shipped directly to UK ports with standard customs clearing documentation."
+      },
+      "eu": {
+        "intro": "Aditya Chemicals supplies high-absorption Magnesium Bis Glycinate to European supplement brands.",
+        "complianceNote": "REACH compliant, conforming to EU food supplement regulations and EP specifications.",
+        "shippingNote": "Delivered door-to-door within Europe via our trusted European shipping partners."
+      }
+    }
   },
   {
     "name": "Magnesium Citrate",
@@ -1176,7 +1266,24 @@ export const products: Product[] = [
       "URL : /calcium-citrate-manufacturer/",
       "Meta Title: Calcium Citrate for High Absorption Supplements",
       "Meta Description: Aditya Chemicals offers calcium citrate for high absorption and bone health support. Ideal for nutraceutical and digestive-friendly formulations."
-    ]
+    ],
+    "regionalContent": {
+      "us": {
+        "intro": "Aditya Chemicals manufactures highly bioavailable Calcium Bis Glycinate, serving the US bone health supplement market.",
+        "complianceNote": "Conforms to USP/FCC guidelines, manufactured in an FDA-inspected facility.",
+        "shippingNote": "Distributed locally from our Boca Raton, Florida warehouse to ensure rapid delivery."
+      },
+      "uk": {
+        "intro": "We supply high-purity Calcium Bis Glycinate to UK infant nutrition and health supplement manufacturers.",
+        "complianceNote": "Complies with BP specifications and has full UK-REACH registration status.",
+        "shippingNote": "Direct supply routes from India to major UK locations with complete export documentation."
+      },
+      "eu": {
+        "intro": "Aditya Chemicals delivers premium bulk Calcium Bis Glycinate to European dietary supplement brands.",
+        "complianceNote": "Fully REACH registered and EP compliant for distribution across the European Union.",
+        "shippingNote": "Shipped through our European logistical networks, offering door-to-door delivery with customs cleared."
+      }
+    }
   },
   {
     "name": "Calcium Lactate Gluconate",
@@ -1433,7 +1540,24 @@ export const products: Product[] = [
       "Oral & Dental Care Formulations: Used in toothpaste and oral care products targeting enamel remineralisation and dental health.",
       "Bone & Skeletal Health Products: Supports skeletal mineralisation and maintenance of healthy bone density.",
       "Nutraceutical Formulations: Ideal for tablets, capsules, powders, and sachets due to its stable handling characteristics and formulation compatibility."
-    ]
+    ],
+    "regionalContent": {
+      "us": {
+        "intro": "Aditya Chemicals is a premier manufacturer of Calcium Glycerophosphate, delivering highly bioavailable calcium and phosphorus to the US market.",
+        "complianceNote": "Fully compliant with USP standards and FDA regulations, backed by complete DMF documentation for dietary supplements.",
+        "shippingNote": "Distributed from our US warehouse in Boca Raton, Florida, for fast inland shipping across all states."
+      },
+      "uk": {
+        "intro": "We supply premium Calcium Glycerophosphate to UK pharmaceutical and infant nutrition manufacturers.",
+        "complianceNote": "Meets BP standards and complies with UK health and safety regulations, supported by UK-REACH verification.",
+        "shippingNote": "Direct sea/air logistics to the UK with complete customs documentation for seamless clearance."
+      },
+      "eu": {
+        "intro": "Supplying bulk Calcium Glycerophosphate to European pharmaceutical, dental care, and infant formula brands.",
+        "complianceNote": "Fully REACH registered for the EU market, meeting EP and food-grade compliance criteria.",
+        "shippingNote": "Shipped directly from our certified facilities to European distribution centers with door-to-door tracking."
+      }
+    }
   },
   {
     "name": "Zinc Bis Glycinate",
@@ -1474,7 +1598,24 @@ export const products: Product[] = [
       "URL :",
       "Meta Title: Zinc Citrate Manufacturer & Supplier",
       "Meta Description: Aditya Chemicals manufactures high-quality Zinc Citrate for pharmaceutical, nutraceutical, food, and dietary supplement applications with consistent quality and reliable global supply."
-    ]
+    ],
+    "regionalContent": {
+      "us": {
+        "intro": "Aditya Chemicals provides bulk Zinc Bis Glycinate to the US market for immune support and mineral enrichment.",
+        "complianceNote": "Meets USP standards, produced in our FDA-registered, cGMP-certified plant.",
+        "shippingNote": "Available for direct dispatch from our Florida warehouse, reducing lead times."
+      },
+      "uk": {
+        "intro": "We supply premium chelated Zinc Bis Glycinate to UK pharmaceutical and supplement formulators.",
+        "complianceNote": "Conforms to BP requirements and supported by full UK-REACH documentation.",
+        "shippingNote": "Efficient sea and air logistics directly to the UK, ensuring consistent inventory."
+      },
+      "eu": {
+        "intro": "Aditya Chemicals is a trusted supplier of Zinc Bis Glycinate to European wellness and nutritional brands.",
+        "complianceNote": "EU REACH registered and EP compliant, assuring compliance with European safety criteria.",
+        "shippingNote": "Shipped directly to EU hubs with complete import clearance handling."
+      }
+    }
   },
   {
     "name": "Zinc L-Pidolate",

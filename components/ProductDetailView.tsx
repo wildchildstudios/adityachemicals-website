@@ -1,43 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import ScrollBackground from "@/components/ScrollBackground";
 import Interactive3DMolecule from "@/components/Interactive3DMolecule";
-import { getCategoryBySlug, getProductBySlug, products } from "@/data/products";
-
-interface PageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
-
-export async function generateStaticParams() {
-  return products.map((prod) => ({
-    slug: prod.slug,
-  }));
-}
-
-export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
-  if (!product) return {};
-
-  if (slug === "dl-methionine-2") {
-    return {
-      title: "DL-Methionine (CAS 59-51-8) | Bulk Manufacturer & Global Supplier – Aditya Chemicals",
-      description: "DL-Methionine (CAS 59-51-8) manufactured to BP/USP/FCC standards. GMP-certified bulk supply for animal feed, nutraceutical & pharma use. Fast export to the USA, UK & EU.",
-      keywords: "DL-Methionine manufacturer, DL-Methionine supplier, bulk DL-Methionine, DL-Methionine CAS 59-51-8, DL-Methionine feed grade, buy DL-Methionine Europe/UK/USA",
-    };
-  }
-
-  const compliance = product.details?.grade ? ` Compliant with ${product.details.grade}` : "";
-
-  return {
-    title: `${product.name} (CAS ${product.casNumber}) Bulk Supplier & Manufacturer`,
-    description: `Buy high-purity ${product.name} (CAS Registry No. ${product.casNumber}) in bulk.${compliance} GMP-certified manufacturing, reliable global shipping to USA, Europe, UK, and Asia.`,
-    keywords: `${product.name}, CAS ${product.casNumber}, bulk ${product.name}, buy ${product.name}, ${product.name} manufacturer, ${product.name} supplier, USP grade ${product.name}, BP grade ${product.name}`,
-  };
-}
+import { Product, Category } from "@/data/products";
 
 // Crisp Chemical Structure Image for Calcium Glycerophosphate
 function CalciumGlycerophosphateStructure() {
@@ -58,46 +23,11 @@ function CalciumGlycerophosphateStructure() {
 // Crisp Vector Chemical Structure diagram for DL-Methionine
 function DLMethionineStructure() {
   return (
-    <div className="flex flex-col items-center justify-center p-4 bg-white border border-surface-container-highest rounded-2xl h-full min-h-[220px]">
-      <svg viewBox="0 0 400 200" className="w-full h-auto max-h-[165px]" xmlns="http://www.w3.org/2000/svg">
-        {/* CH3 label left */}
-        <text x="20" y="105" fill="#015095" fontFamily="monospace" fontWeight="bold" fontSize="16">H₃C</text>
-        <line x1="55" y1="100" x2="90" y2="100" stroke="#1E293B" strokeWidth="2.5" />
-
-        {/* Sulfur atom (S) */}
-        <text x="95" y="105" fill="#D97706" fontFamily="monospace" fontWeight="bold" fontSize="18">S</text>
-        <line x1="110" y1="100" x2="145" y2="70" stroke="#1E293B" strokeWidth="2.5" />
-
-        {/* CH2 carbon 1 (vertex) */}
-        <line x1="145" y1="70" x2="195" y2="105" stroke="#1E293B" strokeWidth="2.5" />
-
-        {/* CH2 carbon 2 (vertex) */}
-        <line x1="195" y1="105" x2="245" y2="70" stroke="#1E293B" strokeWidth="2.5" />
-
-        {/* NH2 group going down from CH carbon */}
-        <line x1="245" y1="70" x2="245" y2="115" stroke="#1E293B" strokeWidth="2.5" />
-        <text x="233" y="132" fill="#015095" fontFamily="monospace" fontWeight="bold" fontSize="16">NH₂</text>
-
-        {/* C of carboxylic acid */}
-        <line x1="245" y1="70" x2="295" y2="100" stroke="#1E293B" strokeWidth="2.5" />
-
-        {/* Double-bonded O going up-right */}
-        <line x1="292" y1="98" x2="317" y2="60" stroke="#1E293B" strokeWidth="2" />
-        <line x1="298" y1="101" x2="323" y2="63" stroke="#1E293B" strokeWidth="2" />
-        <text x="323" y="58" fill="#B91C1C" fontFamily="monospace" fontWeight="bold" fontSize="16">O</text>
-
-        {/* Single-bonded OH going down-right */}
-        <line x1="295" y1="100" x2="325" y2="125" stroke="#1E293B" strokeWidth="2.5" />
-        <text x="330" y="132" fill="#B91C1C" fontFamily="monospace" fontWeight="bold" fontSize="16">OH</text>
-      </svg>
-      <div className="mt-2 text-center text-[10px] text-on-surface-variant/80 font-medium">
-        <span className="font-semibold block text-deep-navy text-xs">DL-Methionine Chemical Structure</span>
-        2-amino-4-(methylsulfanyl)butanoic acid (C₅H₁₁NO₂S)
-      </div>
+    <div className="flex flex-col items-center justify-center p-4 bg-white border border-surface-container-highest rounded-2xl h-full min-h-[220px] relative">
+      <Interactive3DMolecule />
     </div>
   );
 }
-
 
 // Fallback Molecular Art SVG for other products
 function GenericMolecularStructure({ formula }: { formula?: string }) {
@@ -120,45 +50,52 @@ function GenericMolecularStructure({ formula }: { formula?: string }) {
   );
 }
 
-export default async function ProductDetailPage({ params }: PageProps) {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
+interface ProductDetailViewProps {
+  product: Product;
+  parentCat: Category | null | undefined;
+  subCat: Category | null | undefined;
+  region: 'default' | 'us' | 'uk' | 'eu';
+}
 
-  if (!product) {
-    notFound();
-  }
+export default function ProductDetailView({ product, parentCat, subCat, region }: ProductDetailViewProps) {
+  // Extract regional copy if available, otherwise fallback
+  const regional = product.regionalContent?.[region as keyof typeof product.regionalContent];
+  const introText = regional?.intro || product.description || `Aditya Chemicals offers high-purity ${product.name}, manufactured to consistent quality standards supporting pharmaceutical, nutraceutical, dietary, and commercial applications worldwide.`;
+  const complianceText = regional?.complianceNote || "Manufactured under stringent quality control systems in compliance with BP/EP/USP/FCC standards. Each batch is strictly tested to ensure purity, potency, and safety for use in nutraceutical, pharmaceutical, and food formulations worldwide.";
+  const shippingNoteText = regional?.shippingNote || "";
 
-  const parentCat = getCategoryBySlug(product.parentCategorySlug);
-  const subCat = product.subCategorySlug ? getCategoryBySlug(product.subCategorySlug) : null;
+  // Dynamic area served string
+  const areaServedMap = {
+    us: "US",
+    uk: "GB",
+    eu: "EU",
+    default: "IN"
+  };
+  const areaServed = areaServedMap[region] || "IN";
 
-  // Build chemical-specific JSON-LD Product schema
+  // Build chemical-specific JSON-LD Product schema without offers (Step 2 & 5)
   const productSchema: any = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
     "image": `https://www.adityachemicals.com${product.imagePath}`,
-    "description": product.description || `High-purity industrial chemical compound ${product.name}. CAS Number: ${product.casNumber}. Category: ${product.categoryTag}.`,
+    "description": introText,
     "category": product.categoryTag,
     "mpn": product.casNumber,
     "brand": {
       "@type": "Brand",
       "name": "Aditya Chemicals"
     },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "USD",
-      "lowPrice": "Contact for Pricing",
-      "offerCount": "1",
-      "seller": {
-        "@type": "Organization",
-        "name": "Aditya Chemicals"
-      }
-    },
     "additionalProperty": [
       {
         "@type": "PropertyValue",
         "name": "CAS Registry Number",
         "value": product.casNumber
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Target Region",
+        "value": areaServed
       }
     ]
   };
@@ -185,8 +122,50 @@ export default async function ProductDetailPage({ params }: PageProps) {
     });
   }
 
+  // Inject specific LocalBusiness based on region (Step 5)
+  let localBusinessSchema: any = null;
+  if (region === "us") {
+    localBusinessSchema = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Aditya Chemicals USA Warehouse",
+      "image": "https://www.adityachemicals.com/aditya_logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6550 E Roger Cir",
+        "addressLocality": "Boca Raton",
+        "addressRegion": "FL",
+        "postalCode": "33487",
+        "addressCountry": "US"
+      }
+    };
+  } else {
+    // default, uk, eu
+    localBusinessSchema = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Aditya Chemicals Corporate Office",
+      "image": "https://www.adityachemicals.com/aditya_logo.png",
+      "telephone": "+91-79-26854545",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "204, President Plaza, Nr. Thaltej Cross Road, S. G. Highway",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "postalCode": "380054",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:30",
+        "closes": "18:00"
+      }
+    };
+  }
+
   let faqSchema: any = null;
-  if (slug === "dl-methionine-2") {
+  if (product.slug === "dl-methionine-2") {
     faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -235,6 +214,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
     };
   }
 
+  // Pre-calculate regional prefix path
+  const regionalPath = region === 'default' ? '' : `/${region}`;
+
   return (
     <>
       <ScrollBackground />
@@ -243,6 +225,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
+      {localBusinessSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      )}
       {faqSchema && (
         <script
           type="application/ld+json"
@@ -261,19 +249,19 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
           {/* Breadcrumbs */}
           <nav className="flex flex-wrap items-center gap-2 text-xs md:text-sm text-on-surface-variant font-medium leading-relaxed">
-            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <Link href={`${regionalPath}/`} className="hover:text-primary transition-colors">Home</Link>
             <span className="material-symbols-outlined text-[10px] md:text-xs text-outline/60">chevron_right</span>
-            <Link href="/products" className="hover:text-primary transition-colors">Products</Link>
+            <Link href={`${regionalPath}/products`} className="hover:text-primary transition-colors">Products</Link>
             <span className="material-symbols-outlined text-[10px] md:text-xs text-outline/60">chevron_right</span>
             {parentCat && (
-              <Link href={`/product-category/${parentCat.slug}`} className="hover:text-primary transition-colors">
+              <Link href={`${regionalPath}/product-category/${parentCat.slug}`} className="hover:text-primary transition-colors">
                 {parentCat.name}
               </Link>
             )}
             {subCat && (
               <>
                 <span className="material-symbols-outlined text-[10px] md:text-xs text-outline/60">chevron_right</span>
-                <Link href={`/product-category/${subCat.slug}`} className="hover:text-primary transition-colors">
+                <Link href={`${regionalPath}/product-category/${subCat.slug}`} className="hover:text-primary transition-colors">
                   {subCat.name}
                 </Link>
               </>
@@ -306,7 +294,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               )}
 
               <p className="text-on-surface-variant text-base md:text-lg leading-relaxed font-light">
-                {product.description || `Aditya Chemicals offers high-purity ${product.name}, manufactured to consistent quality standards supporting pharmaceutical, nutraceutical, dietary, and commercial applications worldwide. Our state-of-the-art facilities ensure dependable mineral delivery, purity assurance, and strict batch-to-batch compliance.`}
+                {introText}
               </p>
 
               {/* USP Row: Calcium Glycerophosphate */}
@@ -472,12 +460,20 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 <h3 className="text-lg font-bold text-deep-navy border-b border-surface-container-highest pb-2 select-none uppercase tracking-wider">
                   Chemical Structure
                 </h3>
-                <Interactive3DMolecule />
+                <DLMethionineStructure />
+              </div>
+            )}
+            {product.slug === "calcium-glycerophosphate" && (
+              <div className="lg:col-span-6 bg-white rounded-[2rem] p-6 md:p-8 border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between space-y-4">
+                <h3 className="text-lg font-bold text-deep-navy border-b border-surface-container-highest pb-2 select-none uppercase tracking-wider">
+                  Chemical Structure
+                </h3>
+                <CalciumGlycerophosphateStructure />
               </div>
             )}
 
             {/* Chemical Identity Card */}
-            <div className={`${product.slug === "calcium-glycerophosphate" ? "lg:col-span-8 lg:col-start-3" : "lg:col-span-6"} bg-white rounded-[2rem] p-6 md:p-8 border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between space-y-6`}>
+            <div className="lg:col-span-6 bg-white rounded-[2rem] p-6 md:p-8 border border-surface-container-highest shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between space-y-6">
               <div>
                 <h3 className="text-lg font-bold text-deep-navy border-b border-surface-container-highest pb-2 select-none uppercase tracking-wider">
                   Chemical Identity
@@ -525,8 +521,19 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   </tbody>
                 </table>
               </div>
+
+              {/* Shipping Note Alert Box (Step 3) */}
+              {shippingNoteText && (
+                <div className="flex items-center gap-3 p-4 bg-primary/5 border border-primary/20 rounded-2xl text-xs text-on-surface-variant font-medium leading-relaxed select-none">
+                  <span className="material-symbols-outlined text-primary text-xl select-none flex-shrink-0">
+                    local_shipping
+                  </span>
+                  <span>{shippingNoteText}</span>
+                </div>
+              )}
+
               <div className="pt-4 border-t border-surface-container-highest/60">
-                <Link href={`/contact?product=${encodeURIComponent(product.name)}`}>
+                <Link href={`${regionalPath}/contact?product=${encodeURIComponent(product.name)}`}>
                   <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary hover:bg-vibrant-azure text-white rounded-xl font-button text-xs uppercase hover:scale-[0.99] transition-all duration-200 shadow-sm cursor-pointer font-bold tracking-wider text-center">
                     Request Quote / COA / Samples
                     <span className="material-symbols-outlined text-sm select-none">mail</span>
@@ -761,7 +768,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 Quality & Regulatory Compliance
               </h3>
               <p className="text-xs md:text-sm text-on-surface-variant max-w-3xl leading-relaxed">
-                Manufactured under stringent quality control systems in compliance with BP/EP/USP/FCC standards. Each batch is strictly tested to ensure purity, potency, and safety for use in nutraceutical, pharmaceutical, and food formulations worldwide.
+                {complianceText}
               </p>
             </div>
             {/* Compliance Badges Container */}
